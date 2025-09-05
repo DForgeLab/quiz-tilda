@@ -25,7 +25,6 @@ function runBuild() {
     }
 
     isBuilding = true;
-    console.log('\n🔄 Обнаружены изменения, запускаю пересборку...');
 
     exec(config.buildCommand, (error, stdout, stderr) => {
         isBuilding = false;
@@ -38,9 +37,6 @@ function runBuild() {
         if (stderr) {
             console.error('⚠️ Предупреждения:', stderr);
         }
-
-        console.log('✅ Пересборка завершена!');
-        console.log('👀 Ожидаю новые изменения...\n');
     });
 }
 
@@ -83,7 +79,7 @@ function watchFile(filePath) {
 
     fs.watchFile(filePath, (curr, prev) => {
         if (curr.mtime !== prev.mtime) {
-            console.log(`📝 Изменение в файле: ${filePath}`);
+            console.log(`📝 Изменение в файле: ${filePath}, запускаю пересборку...`);
             scheduleBuild();
         }
     });
