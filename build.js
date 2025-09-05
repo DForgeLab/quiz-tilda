@@ -18,6 +18,7 @@ const config = {
 
     // JS файлы в порядке подключения
     jsFiles: [
+        'js/jquery-3.7.1.min.js',
         'js/swiper-bundle.min.js',
         'js/fancybox.js',
         'js/imask.js',
