@@ -1,5 +1,5 @@
-.quiz .swiper-button-next,
-.quiz .swiper-button-prev
+.swiper-button-next,
+.swiper-button-prev
 {
     color: #000 !important;
 
@@ -24,25 +24,25 @@
     flex-wrap: wrap;
 }
 
-.quiz .swiper-button-prev
+.swiper-button-prev
 {
     left: -12px;
 }
 
-.quiz .swiper-button-next
+.swiper-button-next
 {
     right: -12px;
 }
 
-.quiz .swiper-button-next:after,
-.quiz .swiper-button-prev:after
+.swiper-button-next:after,
+.swiper-button-prev:after
 {
     display: none;
 }
 
 
-.quiz .swiper-button-next .icon,
-.quiz .swiper-button-prev .icon
+.swiper-button-next .icon,
+.swiper-button-prev .icon
 {
     display: block;
 
@@ -50,14 +50,14 @@
     height: 20px;
 }
 
-.quiz .swiper-button-prev .icon
+.swiper-button-prev .icon
 {
     transform: rotate(180deg);
 }
 
 
-.quiz .swiper-button-next:hover,
-.quiz .swiper-button-prev:hover
+.swiper-button-next:hover,
+.swiper-button-prev:hover
 {
     color: #fff;
 
@@ -66,25 +66,25 @@
 
 
 
-.quiz .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.quiz .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
 {
     margin: 0;
 }
 
 
-.quiz .swiper-button-next.swiper-button-disabled,
-.quiz .swiper-button-prev.swiper-button-disabled
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled
 {
     display: none;
 }
 
 
 
-.quiz .swiper-horizontal > .swiper-pagination-bullets,
-.quiz .swiper-pagination-bullets.swiper-pagination-horizontal,
-.quiz .swiper-pagination-custom,
-.quiz .swiper-pagination-fraction
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction
 {
     position: absolute;
     bottom: -33px;
@@ -103,7 +103,7 @@
     flex-wrap: wrap;
 }
 
-.quiz .swiper-pagination-bullet
+.swiper-pagination-bullet
 {
     display: block;
 
@@ -119,26 +119,26 @@
     background: #0098ff;
 }
 
-.quiz .swiper-pagination-bullet + .swiper-pagination-bullet
+.swiper-pagination-bullet + .swiper-pagination-bullet
 {
     margin-left: 11px !important;
 }
 
-.quiz .swiper-pagination-bullet:hover,
-.quiz .swiper-pagination-bullet.active
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet.active
 {
     border-color: #0098ff;
     background: #fff;
 }
 
-.quiz .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
 {
     margin: 0;
 }
 
 
 
-.quiz .swiper-horizontal > .swiper-scrollbar
+.swiper-horizontal > .swiper-scrollbar
 {
     position: relative;
     bottom: 0;
@@ -153,7 +153,7 @@
 }
 
 
-.quiz .swiper-scrollbar-drag
+.swiper-scrollbar-drag
 {
     border-radius: 3px;
     background: #d9d9d9;
