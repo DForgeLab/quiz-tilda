@@ -1,0 +1,160 @@
+.quiz .swiper-button-next,
+.quiz .swiper-button-prev
+{
+    color: #000 !important;
+
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+    transition: .2s linear;
+    transform: none;
+
+    border-radius: 50%;
+    background: #fff;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.quiz .swiper-button-prev
+{
+    left: -12px;
+}
+
+.quiz .swiper-button-next
+{
+    right: -12px;
+}
+
+.quiz .swiper-button-next:after,
+.quiz .swiper-button-prev:after
+{
+    display: none;
+}
+
+
+.quiz .swiper-button-next .icon,
+.quiz .swiper-button-prev .icon
+{
+    display: block;
+
+    width: 10px;
+    height: 20px;
+}
+
+.quiz .swiper-button-prev .icon
+{
+    transform: rotate(180deg);
+}
+
+
+.quiz .swiper-button-next:hover,
+.quiz .swiper-button-prev:hover
+{
+    color: #fff;
+
+    background: #6f6f6f;
+}
+
+
+
+.quiz .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.quiz .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}
+
+
+.quiz .swiper-button-next.swiper-button-disabled,
+.quiz .swiper-button-prev.swiper-button-disabled
+{
+    display: none;
+}
+
+
+
+.quiz .swiper-horizontal > .swiper-pagination-bullets,
+.quiz .swiper-pagination-bullets.swiper-pagination-horizontal,
+.quiz .swiper-pagination-custom,
+.quiz .swiper-pagination-fraction
+{
+    position: absolute;
+    bottom: -33px;
+    left: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 11px;
+
+    pointer-events: none;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.quiz .swiper-pagination-bullet
+{
+    display: block;
+
+    width: 11px;
+    height: 11px;
+
+    transition: .2s linear;
+    pointer-events: auto;
+
+    opacity: 1;
+    border: 2px solid #0098ff;
+    border-radius: 50%;
+    background: #0098ff;
+}
+
+.quiz .swiper-pagination-bullet + .swiper-pagination-bullet
+{
+    margin-left: 11px !important;
+}
+
+.quiz .swiper-pagination-bullet:hover,
+.quiz .swiper-pagination-bullet.active
+{
+    border-color: #0098ff;
+    background: #fff;
+}
+
+.quiz .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}
+
+
+
+.quiz .swiper-horizontal > .swiper-scrollbar
+{
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+    margin-top: 19px;
+
+    border-radius: 3px;
+    background: transparent;
+}
+
+
+.quiz .swiper-scrollbar-drag
+{
+    border-radius: 3px;
+    background: #d9d9d9;
+}
