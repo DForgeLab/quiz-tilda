@@ -5,7 +5,7 @@ const path = require('path');
 const config = {
     // Базовый URL для всех относительных ссылок
     // GitHub Raw URL формат: https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/PATH
-    baseUrl: 'https://raw.githubusercontent.com/DForgeLab/quiz-tilda/main/dist', // GitHub Raw URL
+    baseUrl: 'https://raw.githubusercontent.com/DForgeLab/quiz-tilda/refs/heads/main/dist', // GitHub Raw URL
 
     // CSS файлы в порядке подключения
     cssFiles: [
