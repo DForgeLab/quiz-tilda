@@ -32,7 +32,7 @@ const config = {
     output: {
         html: 'index.html',
         css: 'styles.css',
-        js: 'scripts.js'
+        // JS файлы копируются отдельно
     }
 };
 
@@ -104,21 +104,24 @@ function combineCSS() {
     return combinedCSS;
 }
 
-// Функция для объединения JS файлов
-function combineJS() {
-    console.log('📦 Объединяю JS файлы...');
-    let combinedJS = '';
+// Функция для копирования JS файлов отдельно
+function copyJSFiles() {
+    console.log('📦 Копирую JS файлы...');
+
+    // Создаем папку js в dist
+    const jsDir = path.join('dist', 'js');
+    if (!fs.existsSync(jsDir)) {
+        fs.mkdirSync(jsDir, { recursive: true });
+    }
 
     config.jsFiles.forEach(filename => {
         const content = readFile(filename);
         if (content) {
-            combinedJS += `/* ===== ${filename} ===== */\n`;
-            combinedJS += content;
-            combinedJS += '\n\n';
+            const outputPath = path.join(jsDir, path.basename(filename));
+            writeFile(outputPath, content);
+            console.log(`✓ Скопирован файл: ${filename}`);
         }
     });
-
-    return combinedJS;
 }
 
 // Функция для создания HTML файла
@@ -385,9 +388,8 @@ function build() {
     const combinedCSS = combineCSS();
     writeFile(path.join(outputDir, config.output.css), combinedCSS);
 
-    // Объединяем JS
-    const combinedJS = combineJS();
-    writeFile(path.join(outputDir, config.output.js), combinedJS);
+    // Копируем JS файлы отдельно
+    copyJSFiles();
 
     // Копируем HTML и добавляем базовый URL
     const htmlContent = readFile('index.html');
@@ -425,7 +427,7 @@ function build() {
     console.log(`📁 Файлы созданы в папке: ${outputDir}/`);
     console.log(`📄 HTML: ${config.output.html}`);
     console.log(`🎨 CSS: ${config.output.css}`);
-    console.log(`⚡ JS: ${config.output.js}`);
+    console.log(`⚡ JS: отдельные файлы в папке js/`);
     if (config.baseUrl) {
         console.log(`🌐 Базовый URL: ${config.baseUrl}`);
     }
