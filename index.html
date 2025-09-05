@@ -1,236 +1,480 @@
 <link rel="stylesheet" href="styles.css">
-
-<!-- Основной контент квиза -->
-<div class="quiz">
-    <div class="row">
-        <div class="data">
-            <div class="head">
-                <div class="count">
-                    <span class="current">1</span> из <span class="total">4</span>
-                </div>
-                <div class="progress">
-                    <div style="width: 25%"></div>
-                </div>
-            </div>
-
-            <!-- Шаг 1 -->
-            <div class="step step1" style="display: block;">
-                <div class="question">Выберите ваш тип телосложения</div>
-                <div class="exp">Это поможет нам подобрать оптимальный размер</div>
-
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <label>
-                                <input type="radio" name="body_type" value="slim">
-                                <div class="thumb">
-                                    <img src="img/s5-pk.jpg" alt="Худощавое">
-                                </div>
-                                <div class="check">
-                                    <svg class="icon" viewBox="0 0 9 9">
-                                        <path d="M1 4.5L3.5 7L8 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                    </svg>
-                                </div>
-                                <div class="name">Худощавое</div>
-                            </label>
-                        </div>
-                        <div class="swiper-slide">
-                            <label>
-                                <input type="radio" name="body_type" value="normal">
-                                <div class="thumb">
-                                    <img src="img/s5-pk.jpg" alt="Нормальное">
-                                </div>
-                                <div class="check">
-                                    <svg class="icon" viewBox="0 0 9 9">
-                                        <path d="M1 4.5L3.5 7L8 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                    </svg>
-                                </div>
-                                <div class="name">Нормальное</div>
-                            </label>
-                        </div>
-                        <div class="swiper-slide">
-                            <label>
-                                <input type="radio" name="body_type" value="athletic">
-                                <div class="thumb">
-                                    <img src="img/s5-pk.jpg" alt="Спортивное">
-                                </div>
-                                <div class="check">
-                                    <svg class="icon" viewBox="0 0 9 9">
-                                        <path d="M1 4.5L3.5 7L8 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                    </svg>
-                                </div>
-                                <div class="name">Спортивное</div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="swiper-scrollbar"></div>
-                </div>
-            </div>
-
-            <!-- Шаг 2 -->
-            <div class="step step2" style="display: none;">
-                <div class="question">Ваш рост</div>
-                <div class="exp">Укажите ваш рост в сантиметрах</div>
-                <div class="range">
-                    <input type="text" id="height_range" name="height" value="168">
-                </div>
-            </div>
-
-            <!-- Шаг 3 -->
-            <div class="step step3" style="display: none;">
-                <div class="question">Ваш вес</div>
-                <div class="exp">Укажите ваш вес в килограммах</div>
-                <div class="range">
-                    <input type="text" id="weight_range" name="weight" value="70">
-                </div>
-            </div>
-
-            <!-- Шаг 4 -->
-            <div class="step step4" style="display: none;">
-                <div class="question">Ваш возраст</div>
-                <div class="exp">Это поможет подобрать подходящий стиль</div>
-                <div class="radios">
-                    <label>
-                        <input type="radio" name="age" value="18-25">
-                        <div>18-25 лет</div>
-                    </label>
-                    <label>
-                        <input type="radio" name="age" value="26-35">
-                        <div>26-35 лет</div>
-                    </label>
-                    <label>
-                        <input type="radio" name="age" value="36-45">
-                        <div>36-45 лет</div>
-                    </label>
-                    <label>
-                        <input type="radio" name="age" value="46-55">
-                        <div>46-55 лет</div>
-                    </label>
-                    <label>
-                        <input type="radio" name="age" value="55+">
-                        <div>55+ лет</div>
-                    </label>
-                </div>
-            </div>
-
-            <!-- Шаг 5 - Форма контактов -->
-            <div class="step step5" style="display: none;">
-                <div class="block_head">
-                    <div class="title">Получите персональную подборку</div>
-                    <div class="desc">Оставьте контакты и мы отправим вам рекомендации</div>
-                </div>
-
-                <form class="form">
-                    <div class="line">
-                        <div class="label">Ваше имя</div>
-                        <div class="field">
-                            <input type="text" class="input" name="name" placeholder="Введите ваше имя" required>
-                        </div>
-                    </div>
-
-                    <div class="line">
-                        <div class="label">Номер телефона</div>
-                        <div class="field">
-                            <input type="tel" class="input" name="phone" placeholder="+7 (999) 999-99-99" required>
-                        </div>
-                    </div>
-
-                    <div class="line">
-                        <div class="label">Email</div>
-                        <div class="field">
-                            <input type="email" class="input" name="email" placeholder="your@email.com">
-                        </div>
-                    </div>
-
-                    <div class="submit">
-                        <button type="submit" class="submit_btn">Получить подборку</button>
-                        <div class="agree">
-                            <label class="checkbox">
-                                <input type="checkbox" name="agree" required>
-                                <div class="check">
-                                    <svg class="icon" viewBox="0 0 9 9">
-                                        <path d="M1 4.5L3.5 7L8 1" stroke="currentColor" stroke-width="1.5" fill="none"/>
-                                    </svg>
-                                </div>
-                                <span>Согласен с <a href="#" target="_blank">условиями обработки данных</a></span>
-                            </label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <div class="btns">
-                <button class="prev_btn disabled">
-                    <svg class="icon" viewBox="0 0 10 20">
-                        <path d="M8 2L2 10L8 18" stroke="currentColor" stroke-width="2" fill="none"/>
-                    </svg>
-                </button>
-                <button class="next_btn">
-                    <span>Далее</span>
-                    <svg class="icon" viewBox="0 0 10 20">
-                        <path d="M2 2L8 10L2 18" stroke="currentColor" stroke-width="2" fill="none"/>
-                    </svg>
-                </button>
-            </div>
+<section class="quiz block" id="form">
+    <div class="cont">
+        <div class="block_head center">
+            <div class="title">Ответьте на 4 вопроса,<br> и получите подарок</div>
+            <div class="desc">Галстук/бабочку при покупке костюма</div>
         </div>
-
-        <div class="col_right">
-            <div class="manager">
-                <div class="photo">
-                    <img src="img/manager.jpg" alt="Менеджер">
-                </div>
-                <div>
-                    <div class="name">Анна Смирнова</div>
-                    <div class="post">Стилист-консультант</div>
-                    <div class="text">Помогу подобрать идеальный размер и стиль для вас</div>
+        <div class="row">
+            <div class="data">
+                <div class="wpcf7 js" id="wpcf7-f196-o1" lang="ru-RU" dir="ltr">
+                    <div class="screen-reader-response">
+                        <p role="status" aria-live="polite" aria-atomic="true"></p>
+                        <ul></ul>
+                    </div>
+                    <div class="wpcf7-form form">
+                        <div style="display: none;">
+                            <input type="hidden" name="_wpcf7" value="196">
+                            <input type="hidden" name="_wpcf7_version" value="5.7.6">
+                            <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f196-o1">
+                            <input type="hidden" name="_wpcf7_container_post" value="0">
+                            <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+                        </div>
+                        <div class="head">
+                            <div class="count"> Вопрос <span class="current">1</span> из <span class="total">4</span>
+                            </div>
+                            <div class="progress">
+                                <div style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        <div class="step step1" style="display: block;" data-text="&lt;p&gt;Сначала определимся, какой костюм вы хотите?&lt;/p&gt;&lt;p&gt;Для свадьбы отлично подойдут сложные фактуры и насыщенные ткани. Для офиса более сдержанные классические пары. Для мероприятий со строгим дресс-кодом понадобится смокинг. Костюм для повседневной носки — casual.&lt;/p&gt;">
+                            <div class="question">Какой костюм вам нужен?</div>
+                            <div class="exp">Выберите один или несколько вариантов</div>
+                            <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                <div class="swiper-wrapper" id="swiper-wrapper-66216d0584cd4c9e" aria-live="polite">
+                                    <div class="swiper-slide visible active" style="width: 244.667px; margin-right: 15px;" role="group" aria-label="1 / 5">
+                                        <label>
+                                            <span class="wpcf7-form-control-wrap" data-name="check-1"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first last"><input type="checkbox" name="check-1[]" value="Casual"><span class="wpcf7-list-item-label">Casual</span></span></span></span>
+                                            <div class="thumb">
+                                                <img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://level-mens.ru/wp-content/uploads/2025/06/DSC_5888-scaled.jpg">
+                                            </div>
+                                            <div class="check">
+                                                <svg class="icon">
+                                                    <use xlink:href="sprite.svg#ic_check"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="name">Casual</div>
+                                        </label>
+                                    </div>
+                                    <div class="swiper-slide visible swiper-slide-next" style="width: 244.667px; margin-right: 15px;" role="group" aria-label="2 / 5">
+                                        <label>
+                                            <span class="wpcf7-form-control-wrap" data-name="check-1"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first last"><input type="checkbox" name="check-1[]" value="На выпускной"><span class="wpcf7-list-item-label">На выпускной</span></span></span></span>
+                                            <div class="thumb">
+                                                <img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://level-mens.ru/wp-content/uploads/2025/06/DSC_5925-scaled.jpg">
+                                            </div>
+                                            <div class="check">
+                                                <svg class="icon">
+                                                    <use xlink:href="sprite.svg#ic_check"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="name">На выпускной</div>
+                                        </label>
+                                    </div>
+                                    <div class="swiper-slide visible" style="width: 244.667px; margin-right: 15px;" role="group" aria-label="3 / 5">
+                                        <label>
+                                            <span class="wpcf7-form-control-wrap" data-name="check-1"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first last"><input type="checkbox" name="check-1[]" value="Офисный"><span class="wpcf7-list-item-label">Офисный</span></span></span></span>
+                                            <div class="thumb">
+                                                <img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://level-mens.ru/wp-content/uploads/2025/06/DSC_5888-scaled.jpg">
+                                            </div>
+                                            <div class="check">
+                                                <svg class="icon">
+                                                    <use xlink:href="sprite.svg#ic_check"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="name">Офисный</div>
+                                        </label>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 244.667px; margin-right: 15px;" role="group" aria-label="4 / 5">
+                                        <label>
+                                            <span class="wpcf7-form-control-wrap" data-name="check-1"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first last"><input type="checkbox" name="check-1[]" value="Свадебный"><span class="wpcf7-list-item-label">Свадебный</span></span></span></span>
+                                            <div class="thumb">
+                                                <img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://level-mens.ru/wp-content/uploads/2025/06/IMG_3622.jpeg">
+                                            </div>
+                                            <div class="check">
+                                                <svg class="icon">
+                                                    <use xlink:href="sprite.svg#ic_check"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="name">Свадебный</div>
+                                        </label>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 244.667px; margin-right: 15px;" role="group" aria-label="5 / 5">
+                                        <label>
+                                            <span class="wpcf7-form-control-wrap" data-name="check-1"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first last"><input type="checkbox" name="check-1[]" value="Смокинг"><span class="wpcf7-list-item-label">Смокинг</span></span></span></span>
+                                            <div class="thumb">
+                                                <img alt="" class="swiper-lazy swiper-lazy-loaded" src="https://level-mens.ru/wp-content/uploads/2025/06/IMG_3610.jpeg">
+                                            </div>
+                                            <div class="check">
+                                                <svg class="icon">
+                                                    <use xlink:href="sprite.svg#ic_check"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="name">Смокинг</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-66216d0584cd4c9e" aria-disabled="true">
+                                    <svg class="icon">
+                                        <use xlink:href="sprite.svg#ic_arr_hor"></use>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-66216d0584cd4c9e" aria-disabled="false">
+                                    <svg class="icon">
+                                        <use xlink:href="sprite.svg#ic_arr_hor"></use>
+                                    </svg>
+                                </div>
+                                <div class="swiper-scrollbar">
+                                    <div class="swiper-scrollbar-drag" style="transform: translate3d(0px, 0px, 0px); width: 454.828px;"></div>
+                                </div>
+                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                            </div>
+                        </div>
+                        <div class="step step2" data-text="&lt;p&gt;Укажите ваш рост. У нас есть костюмы на любой рост, в том числе на очень высокий. Мы подберем костюм, который идеально подойдет именно вам.&lt;/p&gt;">
+                            <div class="question">Ваш рост</div>
+                            <div class="exp">Воспользуйтесь ползунком или введите ваш рост в поле ниже</div>
+                            <div class="range">
+                                <input class="wpcf7-form-control wpcf7-hidden" id="height_range" value="" type="hidden" name="height_range" />
+                            </div>
+                        </div>
+                        <div class="step step3" data-text="&lt;p&gt;Укажите ваш размер одежды. Если вы не знаете точный, вы можете выбрать примерный или пропустить этот вопрос.&lt;/p&gt;">
+                            <div class="question">Размер костюма?</div>
+                            <div class="exp">Выберите подходящий размер</div>
+                            <div class="select">
+                                <span class="wpcf7-form-control-wrap" data-name="menu-964"><select class="wpcf7-form-control wpcf7-select" aria-invalid="false" name="menu-964" style="opacity: 0; width: 0px; padding: 0px; height: 0px;">
+                                        <option value="42">42</option>
+                                        <option value="44">44</option>
+                                        <option value="46">46</option>
+                                        <option value="48">48</option>
+                                        <option value="50">50</option>
+                                        <option value="52">52</option>
+                                        <option value="54">54</option>
+                                        <option value="56">56</option>
+                                        <option value="58">58</option>
+                                        <option value="60">60</option>
+                                        <option value="62">62</option>
+                                        <option value="64">64</option>
+                                        <option value="66">66</option>
+                                        <option value="68">68</option>
+                                        <option value="70">70</option>
+                                    </select>
+                                </span>
+                                <svg class="arr">
+                                    <use xlink:href="sprite.svg#ic_arr_ver"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="step step4" data-text="&lt;p&gt;В нашем салоне есть все необходимые товары, чтобы сделать ваш образ полностью законченным.&lt;/p&gt;">
+                            <div class="question">Какие дополнительные товары вам требуются?</div>
+                            <div class="exp">Выберите один или несколько вариантов</div>
+                            <div class="radios">
+                                <label>
+                                    <span class="wpcf7-form-control-wrap" data-name="checkbox-5">
+                                        <span class="wpcf7-form-control wpcf7-checkbox">
+                                            <span class="wpcf7-list-item first last">
+                                                <input type="checkbox" name="checkbox-5[]" value="Обувь" />
+                                                <span class="wpcf7-list-item-label">Обувь</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <div>
+                                        <div class="check">
+                                            <svg class="icon">
+                                                <use xlink:href="sprite.svg#ic_check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>Обувь</div>
+                                    </div>
+                                </label>
+                                <label>
+                                    <span class="wpcf7-form-control-wrap" data-name="checkbox-5">
+                                        <span class="wpcf7-form-control wpcf7-checkbox">
+                                            <span class="wpcf7-list-item first last">
+                                                <input type="checkbox" name="checkbox-5[]" value="Платок" />
+                                                <span class="wpcf7-list-item-label">Платок</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <div>
+                                        <div class="check">
+                                            <svg class="icon">
+                                                <use xlink:href="sprite.svg#ic_check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>Платок</div>
+                                    </div>
+                                </label>
+                                <label>
+                                    <span class="wpcf7-form-control-wrap" data-name="checkbox-5">
+                                        <span class="wpcf7-form-control wpcf7-checkbox">
+                                            <span class="wpcf7-list-item first last">
+                                                <input type="checkbox" name="checkbox-5[]" value="Галстук" />
+                                                <span class="wpcf7-list-item-label">Галстук</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <div>
+                                        <div class="check">
+                                            <svg class="icon">
+                                                <use xlink:href="sprite.svg#ic_check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>Галстук</div>
+                                    </div>
+                                </label>
+                                <label>
+                                    <span class="wpcf7-form-control-wrap" data-name="checkbox-5">
+                                        <span class="wpcf7-form-control wpcf7-checkbox">
+                                            <span class="wpcf7-list-item first last">
+                                                <input type="checkbox" name="checkbox-5[]" value="Бабочка" />
+                                                <span class="wpcf7-list-item-label">Бабочка</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <div>
+                                        <div class="check">
+                                            <svg class="icon">
+                                                <use xlink:href="sprite.svg#ic_check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>Бабочка</div>
+                                    </div>
+                                </label>
+                                <label>
+                                    <span class="wpcf7-form-control-wrap" data-name="checkbox-5">
+                                        <span class="wpcf7-form-control wpcf7-checkbox">
+                                            <span class="wpcf7-list-item first last">
+                                                <input type="checkbox" name="checkbox-5[]" value="Запонки" />
+                                                <span class="wpcf7-list-item-label">Запонки</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <div>
+                                        <div class="check">
+                                            <svg class="icon">
+                                                <use xlink:href="sprite.svg#ic_check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>Запонки</div>
+                                    </div>
+                                </label>
+                                <label>
+                                    <span class="wpcf7-form-control-wrap" data-name="checkbox-5">
+                                        <span class="wpcf7-form-control wpcf7-checkbox">
+                                            <span class="wpcf7-list-item first last">
+                                                <input type="checkbox" name="checkbox-5[]" value="Носки" />
+                                                <span class="wpcf7-list-item-label">Носки</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <div>
+                                        <div class="check">
+                                            <svg class="icon">
+                                                <use xlink:href="sprite.svg#ic_check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>Носки</div>
+                                    </div>
+                                </label>
+                                <label>
+                                    <span class="wpcf7-form-control-wrap" data-name="checkbox-5">
+                                        <span class="wpcf7-form-control wpcf7-checkbox">
+                                            <span class="wpcf7-list-item first last">
+                                                <input type="checkbox" name="checkbox-5[]" value="Ремень" />
+                                                <span class="wpcf7-list-item-label">Ремень</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <div>
+                                        <div class="check">
+                                            <svg class="icon">
+                                                <use xlink:href="sprite.svg#ic_check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>Ремень</div>
+                                    </div>
+                                </label>
+                                <label>
+                                    <span class="wpcf7-form-control-wrap" data-name="checkbox-5">
+                                        <span class="wpcf7-form-control wpcf7-checkbox">
+                                            <span class="wpcf7-list-item first last">
+                                                <input type="checkbox" name="checkbox-5[]" value="Пальто" />
+                                                <span class="wpcf7-list-item-label">Пальто</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <div>
+                                        <div class="check">
+                                            <svg class="icon">
+                                                <use xlink:href="sprite.svg#ic_check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>Пальто</div>
+                                    </div>
+                                </label>
+                                <label>
+                                    <span class="wpcf7-form-control-wrap" data-name="checkbox-5">
+                                        <span class="wpcf7-form-control wpcf7-checkbox">
+                                            <span class="wpcf7-list-item first last">
+                                                <input type="checkbox" name="checkbox-5[]" value="Сорочка" />
+                                                <span class="wpcf7-list-item-label">Сорочка</span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <div>
+                                        <div class="check">
+                                            <svg class="icon">
+                                                <use xlink:href="sprite.svg#ic_check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>Сорочка</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="step step5" data-text="&lt;p&gt;Мы уже подбираем варианты костюмов на основе ваших ответов. Укажите ваши контактные данные и удобный способ связи, чтобы мы могли их отправить вам и пригласить к нам на примерку.&lt;/p&gt;">
+                            <div class="block_head">
+                                <div class="title">Остался последний шаг</div>
+                                <div class="desc">Укажите ваши контакты и наш менеджер<br> свяжется с вами в ближайшее время</div>
+                            </div>
+                            <div class="form">
+                                <div class="line contact">
+                                    <div class="label">Как с вами связаться:</div>
+                                    <div class="field">
+                                        <label>
+                                            <span class="wpcf7-form-control-wrap checked" data-name="radio-5"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first last"><input type="radio" name="radio-5" value="Телефон" checked="checked"><span class="wpcf7-list-item-label">Телефон</span></span></span></span>
+                                            <div>
+                                                <svg class="icon">
+                                                    <use xlink:href="sprite.svg#ic_phone"></use>
+                                                </svg>
+                                                <span>Телефон</span>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <span class="wpcf7-form-control-wrap" data-name="radio-5"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first last"><input type="radio" name="radio-5" value="Whatsapp"><span class="wpcf7-list-item-label">Whatsapp</span></span></span></span>
+                                            <div>
+                                                <svg class="icon">
+                                                    <use xlink:href="sprite.svg#ic_whatsapp"></use>
+                                                </svg>
+                                                <span>whatsapp</span>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <span class="wpcf7-form-control-wrap" data-name="radio-5"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first last"><input type="radio" name="radio-5" value="Telegram"><span class="wpcf7-list-item-label">Telegram</span></span></span></span>
+                                            <div>
+                                                <svg class="icon">
+                                                    <use xlink:href="sprite.svg#ic_telegram"></use>
+                                                </svg>
+                                                <span>telegram</span>
+                                            </div>
+                                        </label>
+                                        <label>
+                                            <span class="wpcf7-form-control-wrap" data-name="radio-5"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first last"><input type="radio" name="radio-5" value="Viber"><span class="wpcf7-list-item-label">Viber</span></span></span></span>
+                                            <div>
+                                                <svg class="icon">
+                                                    <use xlink:href="max-messenger.svg"></use>
+                                                </svg>
+                                                <span>Max</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="columns row">
+                                    <div class="line">
+                                        <div class="label">Укажите ваш телефон:</div>
+                                        <div class="field">
+                                            <span class="wpcf7-form-control-wrap" data-name="tel-1"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel input" aria-required="true" aria-invalid="false" placeholder="+7 (___) - ___-__-__" value="" type="tel" name="tel-1"></span>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="label">Укажите ваше имя:</div>
+                                        <div class="field">
+                                            <span class="wpcf7-form-control-wrap" data-name="text-946"><input size="40" class="wpcf7-form-control wpcf7-text input" aria-invalid="false" placeholder="Имя" value="" type="text" name="text-946"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="submit">
+                                    <button type="submit" class="submit_btn">Отправить</button>
+                                    <div class="agree">
+                                        <label class="checkbox">
+                                            <span class="wpcf7-form-control-wrap" data-name="agree"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first last"><input type="checkbox" name="agree[]" value="agree" required><span class="wpcf7-list-item-label">agree</span></span></span></span>
+                                            <div class="check">
+                                                <svg class="icon">
+                                                    <use xlink:href="sprite.svg#ic_check"></use>
+                                                </svg>
+                                            </div>
+                                            <div>Я принимаю <a href="/" target="_blank">соглашение об обработке и использовании персональных данных</a></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button type="button" class="prev_btn disabled">
+                                <svg class="icon">
+                                    <use xlink:href="sprite.svg#ic_arr_hor"></use>
+                                </svg>
+                            </button>
+                            <button type="button" class="next_btn disabled">
+                                <span>Следующий вопрос</span>
+                                <svg class="icon">
+                                    <use xlink:href="sprite.svg#ic_arr_hor"></use>
+                                </svg>
+                            </button>
+                        </div><input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="page_title"><input type="hidden" class="wpcf7-pum" value="{&quot;closepopup&quot;:false,&quot;closedelay&quot;:0,&quot;openpopup&quot;:false,&quot;openpopup_id&quot;:0}">
+                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                    </div>
                 </div>
             </div>
-
-            <div class="contacts">
-                <div class="phone">
-                    <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+            <div class="col_right">
+                <div class="manager">
+                    <div class="photo">
+                        <img data-src="manager.jpg" alt="" class="lazyload loaded" src="manager.jpg">
+                    </div>
+                    <div>
+                        <div class="name">Андрей</div>
+                        <div class="post">Консультант</div>
+                    </div>
+                    <div class="text text1" style="display: block;">
+                        <p>Сначала определимся, какой костюм вы хотите?</p>
+                        <p>Для свадьбы отлично подойдут сложные фактуры и насыщенные ткани. Для офиса более сдержанные классические пары. Для мероприятий со строгим дресс-кодом понадобится смокинг. Костюм для повседневной носки — casual.</p>
+                    </div>
                 </div>
-                <div class="consult_btn">Консультация</div>
-                <div class="messengers">
-                    <a href="#" class="messenger">
-                        <svg class="icon" viewBox="0 0 18 18">
-                            <path d="M9 0C4.03 0 0 3.8 0 8.5c0 2.7 1.4 5.1 3.6 6.7L2.5 18l3.2-.8c.9.2 1.8.3 2.8.3 4.97 0 9-3.8 9-8.5S13.97 0 9 0z"/>
+                <div class="contacts">
+                    <div>
+                        <div class="phone">
+                            <a href="tel:+79223283888">+7 (922) 328-38-88</a>
+                        </div>
+                        <button class="consult_btn modal_btn">Получить консультацию</button>
+                    </div>
+                    <div class="messengers">
+                        <a href="" target="_blank" rel="noopener nofollow" class="whatsapp_link">
+                            <svg class="icon">
+                                <use xlink:href="sprite.svg#ic_whatsapp"></use>
+                            </svg>
+                        </a>
+                        <a href="" target="_blank" rel="noopener nofollow" class="telegram_link">
+                            <svg class="icon">
+                                <use xlink:href="sprite.svg#ic_telegram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="what_we_give">
+                    <a href="s5-pk.jpg" class="btn fancy_img">
+                        <svg class="icon">
+                            <use xlink:href="sprite.svg#ic_eye"></use>
                         </svg>
-                    </a>
-                    <a href="#" class="messenger">
-                        <svg class="icon" viewBox="0 0 18 18">
-                            <path d="M9 0C4.03 0 0 3.8 0 8.5c0 2.7 1.4 5.1 3.6 6.7L2.5 18l3.2-.8c.9.2 1.8.3 2.8.3 4.97 0 9-3.8 9-8.5S13.97 0 9 0z"/>
-                        </svg>
+                        <span>Узнайте что дарим</span>
+                        <img src="ic_question.svg" alt="">
+                        <img src="ic_question2.svg" alt="">
                     </a>
                 </div>
-            </div>
-
-            <div class="what_we_give">
-                <a href="#" class="btn">
-                    <svg class="icon" viewBox="0 0 16 11">
-                        <path d="M1 5.5L6 10L15 1" stroke="currentColor" stroke-width="2" fill="none"/>
-                    </svg>
-                    <span>Что вы получите</span>
-                    <img src="img/s5-pk.jpg" alt="Подарок">
-                </a>
             </div>
         </div>
     </div>
-</div>
-
-<!-- Модальное окно успеха -->
-<div id="success_modal" class="modal" style="display: none;">
-    <div class="block_head">
-        <div class="title">Спасибо!</div>
-        <div class="desc">Ваша заявка принята. Мы свяжемся с вами в ближайшее время.</div>
+</section>
+<section class="modal" id="success_modal">
+    <div class="block_head center">
+        <div class="title">Ваша заявка отправлена</div>
+        <div class="desc">Наш менеджер свяжется с вами в ближайшее время</div>
     </div>
     <div class="image">
-        <img src="img/s5-pk.jpg" alt="Успех">
+        <img data-src="https://level-mens.ru/wp-content/uploads/2025/04/IMG_0300.jpg" alt="" class="lazyload">
     </div>
     <button class="close_btn">Закрыть</button>
-</div>
-
-<script src="js/jquery-3.7.1.min.js"></script>
+</section>
+<!-- <script src="js/jquery-3.7.1.min.js"></script> -->
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/fancybox.js"></script>
 <script src="js/imask.js"></script>
