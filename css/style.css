@@ -1,11 +1,7 @@
-
-
-
 /*------------------
     Reset styles
 ------------------*/
-*
-{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,22 +10,19 @@
 }
 
 *:before,
-*:after
-{
+*:after {
     box-sizing: border-box;
 }
 
-html
-{
+html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-        -ms-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
 }
 
-body
-{
+body {
     margin: 0;
 
     overscroll-behavior: none;
@@ -39,13 +32,11 @@ body
     text-decoration-skip: objects;
 }
 
-img
-{
+img {
     border-style: none;
 }
 
-textarea
-{
+textarea {
     overflow: auto;
 }
 
@@ -53,48 +44,42 @@ input,
 textarea,
 input:active,
 textarea:active,
-button
-{
+button {
     margin: 0;
 
     -webkit-border-radius: 0;
-            border-radius: 0;
-         outline: none transparent !important;
+    border-radius: 0;
+    outline: none transparent !important;
     box-shadow: none;
 
     -webkit-appearance: none;
-            appearance: none;
+    appearance: none;
     -moz-outline: none !important;
 }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button
-{
+input::-webkit-inner-spin-button {
     margin: 0;
 
     -webkit-appearance: none;
 }
 
-input[type=number]
-{
+input[type=number] {
     -moz-appearance: textfield;
 }
 
-:focus
-{
+:focus {
     outline: 0;
 }
 
 :hover,
-:active
-{
+:active {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-touch-callout: none;
 }
 
 
-::-ms-clear
-{
+::-ms-clear {
     display: none;
 }
 
@@ -103,8 +88,7 @@ input[type=number]
 /*-------------------
     Global styles
 -------------------*/
-:root
-{
+:root {
     --bg: #ffffff;
     --scroll_width: 17px;
     --text_color: #000000;
@@ -114,85 +98,73 @@ input[type=number]
 }
 
 
-::selection
-{
+::selection {
     color: #fff;
 
     background: #183062;
 }
 
-::-moz-selection
-{
+::-moz-selection {
     color: #fff;
 
     background: #183062;
 }
 
 
-.clear
-{
+.clear {
     clear: both;
 }
 
-.left
-{
+.left {
     float: left;
 }
 
-.right
-{
+.right {
     float: right;
 }
 
 
 
-html
-{
+html {
     height: 100%;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
-    min-height:         fill-available;
+    min-height: fill-available;
 }
 
-html.custom_scroll ::-webkit-scrollbar
-{
+html.custom_scroll ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 
     background-color: var(--bg);
 }
 
-html.custom_scroll ::-webkit-scrollbar-thumb
-{
+html.custom_scroll ::-webkit-scrollbar-thumb {
     background-color: #183062;
 }
 
-html.custom_scroll
-{
+html.custom_scroll {
     scrollbar-color: #183062 var(--bg);
     scrollbar-width: thin;
 }
 
 
-body
-{
+body {
     color: var(--text_color);
     font: var(--font_size) var(--font_family);
 
     height: 100%;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
-    min-height:         fill-available;
+    min-height: fill-available;
 }
 
-body.menu_open
-{
+body.menu_open {
     overflow: hidden;
 }
 
 
-button
-{
+button {
     color: inherit;
     font-family: inherit;
     font-size: inherit;
@@ -209,8 +181,7 @@ button
 }
 
 
-.wrap
-{
+.wrap {
     position: relative;
     z-index: 9;
 
@@ -225,8 +196,7 @@ button
 }
 
 
-.main
-{
+.main {
     display: flex;
     flex-direction: column;
 
@@ -234,8 +204,7 @@ button
 }
 
 
-.cont
-{
+.cont {
     width: 100%;
     max-width: 1248px;
     margin: 0 auto;
@@ -244,22 +213,19 @@ button
 
 
 .lazyload,
-.swiper-lazy
-{
+.swiper-lazy {
     transition: opacity .5s linear;
 
     opacity: 0;
 }
 
 .lazyload.loaded,
-.swiper-lazy-loaded
-{
+.swiper-lazy-loaded {
     opacity: 1;
 }
 
 
-.row
-{
+.row {
     display: flex;
 
     align-content: flex-start;
@@ -270,8 +236,7 @@ button
 
 
 
-.block
-{
+.block {
     margin-bottom: 70px;
 }
 
@@ -280,14 +245,12 @@ button
 /*--------------
     Fancybox
 --------------*/
-.fancybox__backdrop
-{
+.fancybox__backdrop {
     background: rgba(0, 0, 0, .6);
 }
 
 
-.fancybox__content
-{
+.fancybox__content {
     padding: 0;
 
     border-radius: 0;
@@ -295,16 +258,14 @@ button
 }
 
 
-.fancybox__slide
-{
+.fancybox__slide {
     padding: 40px;
 }
 
 
-.modal.fancybox__content > .carousel__button.is-close,
-.modal + .carousel__button.is-close,
-.fancybox__iframe + .carousel__button.is-close
-{
+.modal.fancybox__content>.carousel__button.is-close,
+.modal+.carousel__button.is-close,
+.fancybox__iframe+.carousel__button.is-close {
     color: #fff;
 
     top: 29px;
@@ -314,16 +275,14 @@ button
     height: 20px;
 }
 
-.fancybox__iframe + .carousel__button.is-close
-{
+.fancybox__iframe+.carousel__button.is-close {
     top: -28px;
     right: 12px;
 }
 
-.modal.fancybox__content > .carousel__button.is-close svg,
-.modal + .carousel__button.is-close svg,
-.fancybox__iframe + .carousel__button.is-close svg
-{
+.modal.fancybox__content>.carousel__button.is-close svg,
+.modal+.carousel__button.is-close svg,
+.fancybox__iframe+.carousel__button.is-close svg {
     display: block;
 
     width: 18px;
@@ -339,8 +298,7 @@ button
 /*----------
     Tabs
 ----------*/
-.tabs
-{
+.tabs {
     display: flex;
 
     margin-bottom: 45px;
@@ -352,8 +310,7 @@ button
 }
 
 
-.tabs button
-{
+.tabs button {
     color: #000;
     font-size: 12px;
     font-weight: 500;
@@ -378,41 +335,35 @@ button
     justify-content: center;
 }
 
-.tabs button:first-child
-{
+.tabs button:first-child {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
 
-.tabs button:last-child
-{
+.tabs button:last-child {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
-.tabs button + button
-{
+.tabs button+button {
     margin-left: 2px;
 }
 
 
-.tabs button:hover
-{
+.tabs button:hover {
     color: #fff;
 
     background: #6f6f6f;
 }
 
-.tabs button.active
-{
+.tabs button.active {
     color: #fff;
 
     background: #282828;
 }
 
 
-.tab_content
-{
+.tab_content {
     visibility: hidden;
     overflow: hidden;
 
@@ -423,8 +374,7 @@ button
     opacity: 0;
 }
 
-.tab_content.active
-{
+.tab_content.active {
     visibility: visible;
     overflow: visible;
 
@@ -441,8 +391,7 @@ button
 /*------------
     Header
 ------------*/
-header
-{
+header {
     position: relative;
     z-index: 9;
     top: 0;
@@ -457,8 +406,7 @@ header
 
 
 
-header .cont
-{
+header .cont {
     align-content: center;
     align-items: center;
     justify-content: space-between;
@@ -466,8 +414,7 @@ header .cont
 
 
 
-header .logo
-{
+header .logo {
     color: currentColor;
 
     display: block;
@@ -475,15 +422,13 @@ header .logo
     text-decoration: none;
 }
 
-header .logo img
-{
+header .logo img {
     display: block;
 }
 
 
 
-header .sep
-{
+header .sep {
     width: 1px;
     height: 44px;
 
@@ -493,14 +438,12 @@ header .sep
 
 
 
-header .menu_item + .menu_item
-{
+header .menu_item+.menu_item {
     margin-left: 36px;
 }
 
 
-header .menu_item > a
-{
+header .menu_item>a {
     color: currentColor;
     font-size: 11px;
     line-height: 120%;
@@ -513,15 +456,13 @@ header .menu_item > a
     text-transform: uppercase;
 }
 
-header .menu_item > a:hover
-{
+header .menu_item>a:hover {
     color: #ababab;
 }
 
 
 
-header .contacts
-{
+header .contacts {
     display: flex;
 
     align-content: center;
@@ -530,14 +471,12 @@ header .contacts
     justify-content: flex-start;
 }
 
-header .contacts > * + *
-{
+header .contacts>*+* {
     margin-left: 35px;
 }
 
 
-header .contacts .messengers
-{
+header .contacts .messengers {
     display: flex;
 
     align-content: center;
@@ -547,8 +486,7 @@ header .contacts .messengers
 }
 
 
-header .contacts .messengers a
-{
+header .contacts .messengers a {
     color: currentColor;
 
     display: block;
@@ -557,34 +495,29 @@ header .contacts .messengers a
     text-decoration: none;
 }
 
-header .contacts .messengers a + a
-{
+header .contacts .messengers a+a {
     margin-left: 11px;
 }
 
 
-header .contacts .messengers .icon
-{
+header .contacts .messengers .icon {
     display: block;
 
     width: 17px;
     height: 17px;
 }
 
-header .contacts .messengers .telegram_link .icon
-{
+header .contacts .messengers .telegram_link .icon {
     width: 18px;
 }
 
 
-header .contacts .messengers a:hover
-{
+header .contacts .messengers a:hover {
     color: #ababab;
 }
 
 
-header .contacts .location
-{
+header .contacts .location {
     font-size: 16px;
     line-height: 120%;
 
@@ -596,14 +529,12 @@ header .contacts .location
     border-bottom: 1px dashed #626566;
 }
 
-header .contacts .location:hover
-{
+header .contacts .location:hover {
     color: #ababab;
 }
 
 
-header .contacts .phone
-{
+header .contacts .phone {
     font-size: 18px;
     font-weight: 500;
     line-height: 120%;
@@ -611,8 +542,7 @@ header .contacts .phone
     letter-spacing: -.03em;
 }
 
-header .contacts .phone a
-{
+header .contacts .phone a {
     color: currentColor;
 
     transition: color .2s linear;
@@ -620,8 +550,7 @@ header .contacts .phone a
     text-decoration: none;
 }
 
-header .contacts .phone a:hover
-{
+header .contacts .phone a:hover {
     color: #ababab;
 }
 
@@ -630,8 +559,7 @@ header .contacts .phone a:hover
 /*-----------------
     Mob. header
 -----------------*/
-.mob_header
-{
+.mob_header {
     position: relative;
     z-index: 102;
     top: 0;
@@ -647,8 +575,7 @@ header .contacts .phone a:hover
 }
 
 
-.mob_header .cont
-{
+.mob_header .cont {
     align-content: center;
     align-items: center;
     justify-content: space-between;
@@ -656,8 +583,7 @@ header .contacts .phone a:hover
 
 
 
-.mob_header .logo
-{
+.mob_header .logo {
     color: currentColor;
 
     display: block;
@@ -667,15 +593,13 @@ header .contacts .phone a:hover
     text-decoration: none;
 }
 
-.mob_header .logo img
-{
+.mob_header .logo img {
     display: block;
 }
 
 
 
-.mob_header .phone a
-{
+.mob_header .phone a {
     color: currentColor;
 
     display: flex;
@@ -688,8 +612,7 @@ header .contacts .phone a:hover
     justify-content: center;
 }
 
-.mob_header .phone .icon
-{
+.mob_header .phone .icon {
     display: block;
 
     width: 24px;
@@ -698,8 +621,7 @@ header .contacts .phone a:hover
 
 
 
-.mob_header .mob_menu_btn
-{
+.mob_header .mob_menu_btn {
     color: currentColor;
 
     display: flex;
@@ -715,16 +637,14 @@ header .contacts .phone a:hover
 }
 
 
-.mob_header .mob_menu_btn .icon
-{
+.mob_header .mob_menu_btn .icon {
     display: block;
 
     width: 36px;
     height: 15px;
 }
 
-.mob_header .mob_menu_btn .icon + .icon
-{
+.mob_header .mob_menu_btn .icon+.icon {
     display: none;
 
     width: 18px;
@@ -732,13 +652,11 @@ header .contacts .phone a:hover
 }
 
 
-.mob_header .mob_menu_btn.active .icon
-{
+.mob_header .mob_menu_btn.active .icon {
     display: none;
 }
 
-.mob_header .mob_menu_btn.active .icon + .icon
-{
+.mob_header .mob_menu_btn.active .icon+.icon {
     display: block;
 }
 
@@ -747,24 +665,21 @@ header .contacts .phone a:hover
 /*----------------
     Block head
 ----------------*/
-.block_head
-{
+.block_head {
     margin-bottom: 46px;
 }
 
 
-.block_head .title
-{
+.block_head .title {
     color: #000000;
     font-size: var(--font_size_title);
-    font-weight: 500;
+    font-weight: 300;
     line-height: 100%;
     display: block;
 }
 
 
-.block_head .desc
-{
+.block_head .desc {
     color: #838383;
     font-size: 22px;
     font-weight: 300;
@@ -773,8 +688,7 @@ header .contacts .phone a:hover
 }
 
 
-.block_head.center
-{
+.block_head.center {
     text-align: center;
 }
 
@@ -783,8 +697,7 @@ header .contacts .phone a:hover
 /*------------------
     .form elements
 ------------------*/
-.form
-{
+.form {
     --form_border_color: #d0d0d0;
     --form_focus_color: #fff;
     --form_error_color: red;
@@ -794,51 +707,43 @@ header .contacts .phone a:hover
 }
 
 
-.form ::-webkit-input-placeholder
-{
+.form ::-webkit-input-placeholder {
     color: var(--form_placeholder_color);
 }
 
-.form :-moz-placeholder
-{
+.form :-moz-placeholder {
     color: var(--form_placeholder_color);
 }
 
-.form ::-moz-placeholder
-{
+.form ::-moz-placeholder {
     color: var(--form_placeholder_color);
 
     opacity: 1;
 }
 
-.form :-ms-input-placeholder
-{
+.form :-ms-input-placeholder {
     color: var(--form_placeholder_color);
 }
 
 
-.form .columns
-{
+.form .columns {
     margin-left: calc(var(--form_columns_offset) * -1);
 
     --form_columns_offset: 10px;
 }
 
-.form .columns > *
-{
+.form .columns>* {
     width: calc(50% - var(--form_columns_offset));
     margin-left: var(--form_columns_offset);
 }
 
 
-.form .line
-{
+.form .line {
     margin-bottom: 14px;
 }
 
 
-.form .label
-{
+.form .label {
     color: #858585;
     font-size: 16px;
     line-height: 100%;
@@ -846,14 +751,12 @@ header .contacts .phone a:hover
 }
 
 
-.form .field
-{
+.form .field {
     position: relative;
 }
 
 
-.form .input
-{
+.form .input {
     color: #000;
     font-family: var(--font_family);
     font-size: 12px;
@@ -863,24 +766,20 @@ header .contacts .phone a:hover
     height: 52px;
     padding: 0 17px;
     transition: .2s linear;
-    border: 1px solid #004735;
+    border: 1px solid #540728;
     border-radius: var(--form_border_radius);
     background: #ffffff;
 }
 
-.form .input:-webkit-autofill
-{
+.form .input:-webkit-autofill {
     -webkit-box-shadow: inset 0 0 0 50px var(--form_bg_color) !important;
 }
 
 
-.form .input:focus
-{
-}
+.form .input:focus {}
 
 
-.form .contact .field
-{
+.form .contact .field {
     display: flex;
 
     margin-bottom: -10px;
@@ -892,22 +791,20 @@ header .contacts .phone a:hover
     justify-content: flex-start;
 }
 
-.form .contact .field > *
-{
-    width: calc(25% - 10px);
+.form .contact .field>* {
+    width: calc(50% - 10px);
     margin-bottom: 10px;
     margin-left: 10px;
 }
 
 
-.form .contact input
-{
+
+.form .contact input {
     display: none;
 }
 
 
-.form .contact label
-{
+.form .contact label {
     color: #000;
     font-size: 12px;
     font-weight: 500;
@@ -921,8 +818,7 @@ header .contacts .phone a:hover
 }
 
 
-.form .contact label div
-{
+.form .contact label div {
     display: flex;
     padding: 14px 15px;
     transition: .2s linear;
@@ -932,12 +828,11 @@ header .contacts .phone a:hover
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start;
-    border: 1px solid #004735;
+    border: 1px solid #540728;
 }
 
 
-.form .contact label .icon
-{
+.form .contact label .icon {
     display: block;
 
     width: 24px;
@@ -946,29 +841,25 @@ header .contacts .phone a:hover
 }
 
 
-.form .contact label:hover div
-{
+.form .contact label:hover div {
     color: #fff;
 
     background: #6f6f6f;
 }
 
-.form .contact input:checked ~ div
-{
+.form .contact input:checked~div {
     color: #fff;
 
     background: #252525;
 }
 
-.form .contact .checked ~ div
-{
+.form .contact .checked~div {
     color: #fff;
-    background: #00694e;
+    background: #540728;
 }
 
 
-.form .date .icon
-{
+.form .date .icon {
     color: #000;
 
     position: absolute;
@@ -990,28 +881,24 @@ header .contacts .phone a:hover
     z-index: 10;
 }
 
-.form .date .icon svg
-{
+.form .date .icon svg {
     display: block;
 
     width: 25px;
     height: 27px;
 }
 
-.form .date .input
-{
+.form .date .input {
     padding-left: 70px;
 }
 
 
-.form .error
-{
+.form .error {
     border-color: var(--form_error_color);
 }
 
 
-.form .checkbox
-{
+.form .checkbox {
     color: #000000;
     font-size: 14px;
     font-weight: 300;
@@ -1028,14 +915,12 @@ header .contacts .phone a:hover
 }
 
 
-.form .checkbox input
-{
+.form .checkbox input {
     display: none;
 }
 
 
-.form .checkbox .check
-{
+.form .checkbox .check {
     color: #183062;
     position: absolute;
     top: 0;
@@ -1051,8 +936,7 @@ header .contacts .phone a:hover
     justify-content: center;
 }
 
-.form .checkbox .check .icon
-{
+.form .checkbox .check .icon {
     display: block;
 
     width: 9px;
@@ -1064,24 +948,20 @@ header .contacts .phone a:hover
 }
 
 
-.form .checkbox a
-{
-    color: #004735;
+.form .checkbox a {
+    color: #540728;
 }
 
 
-.form .checkbox input:checked ~ .check .icon
-{
+.form .checkbox input:checked~.check .icon {
     opacity: 1;
 }
 
-.form .checkbox .checked ~ .check .icon
-{
+.form .checkbox .checked~.check .icon {
     opacity: 1;
 }
 
-.form .submit_btn
-{
+.form .submit_btn {
     font-size: 12px;
     font-weight: 500;
     line-height: 100%;
@@ -1095,12 +975,11 @@ header .contacts .phone a:hover
     text-transform: uppercase;
     border-radius: 8px;
     color: white;
-    background: #004735;
+    background: #540728;
 }
 
-.form .submit_btn:hover
-{
-    background: #00694e;
+.form .submit_btn:hover {
+    background: #540728;
 }
 
 
@@ -1108,14 +987,12 @@ header .contacts .phone a:hover
 /*-------------------
     First section
 -------------------*/
-.first_section
-{
+.first_section {
     margin-bottom: 70px;
 }
 
 
-.first_section .cont
-{
+.first_section .cont {
     display: flex;
 
     align-content: center;
@@ -1125,8 +1002,7 @@ header .contacts .phone a:hover
 }
 
 
-.first_section .data
-{
+.first_section .data {
     position: relative;
     z-index: 5;
 
@@ -1135,8 +1011,7 @@ header .contacts .phone a:hover
 }
 
 
-.first_section .rating
-{
+.first_section .rating {
     font-size: 14px;
     font-weight: 300;
     line-height: 120%;
@@ -1154,8 +1029,7 @@ header .contacts .phone a:hover
 }
 
 
-.first_section .rating .stars
-{
+.first_section .rating .stars {
     display: flex;
 
     align-content: center;
@@ -1164,13 +1038,11 @@ header .contacts .phone a:hover
     justify-content: flex-start;
 }
 
-.first_section .rating .stars > * + *
-{
+.first_section .rating .stars>*+* {
     margin-left: 3px;
 }
 
-.first_section .rating .stars .icon
-{
+.first_section .rating .stars .icon {
     display: block;
 
     width: 11px;
@@ -1178,30 +1050,26 @@ header .contacts .phone a:hover
 }
 
 
-.first_section .rating .val
-{
+.first_section .rating .val {
     font-weight: 500;
 
     margin-left: 4px;
 }
 
 
-.first_section .rating .count
-{
+.first_section .rating .count {
     margin-left: 6px;
 }
 
 
-.first_section .title
-{
+.first_section .title {
     font-size: var(--font_size_title);
     font-weight: 500;
     line-height: 100%;
 }
 
 
-.first_section .tags
-{
+.first_section .tags {
     display: flex;
 
     margin-top: 29px;
@@ -1214,8 +1082,7 @@ header .contacts .phone a:hover
     justify-content: flex-start;
 }
 
-.first_section .tags > *
-{
+.first_section .tags>* {
     color: #fff;
     font-size: 16px;
     font-weight: 300;
@@ -1232,8 +1099,7 @@ header .contacts .phone a:hover
 }
 
 
-.first_section .btns
-{
+.first_section .btns {
     display: flex;
 
     margin-top: 46px;
@@ -1246,15 +1112,13 @@ header .contacts .phone a:hover
     justify-content: flex-start;
 }
 
-.first_section .btns > *
-{
+.first_section .btns>* {
     margin-bottom: 10px;
     margin-left: 10px;
 }
 
 
-.first_section .btns .btn
-{
+.first_section .btns .btn {
     color: #000;
     font-size: 12px;
     font-weight: 500;
@@ -1271,29 +1135,25 @@ header .contacts .phone a:hover
     text-decoration: none;
 }
 
-.first_section .btns .btn:hover
-{
+.first_section .btns .btn:hover {
     color: #fff;
 
     background: #6f6f6f;
 }
 
 
-.first_section .btns .btn.blue
-{
+.first_section .btns .btn.blue {
     color: #fff;
 
     background: #183062;
 }
 
-.first_section .btns .btn.blue:hover
-{
+.first_section .btns .btn.blue:hover {
     background: #102041;
 }
 
 
-.first_section .mob_btns
-{
+.first_section .mob_btns {
     display: none;
 
     margin-top: 30px;
@@ -1301,8 +1161,7 @@ header .contacts .phone a:hover
 }
 
 
-.first_section .swiper
-{
+.first_section .swiper {
     overflow: visible !important;
 
     width: calc(100% - 608px);
@@ -1313,8 +1172,7 @@ header .contacts .phone a:hover
 }
 
 
-.first_section .swiper-slide
-{
+.first_section .swiper-slide {
     visibility: hidden;
 
     width: 340px;
@@ -1325,8 +1183,7 @@ header .contacts .phone a:hover
     opacity: 0;
 }
 
-.first_section .swiper-slide.visible
-{
+.first_section .swiper-slide.visible {
     visibility: visible;
 
     pointer-events: auto;
@@ -1334,8 +1191,7 @@ header .contacts .phone a:hover
     opacity: 1 !important;
 }
 
-.first_section .swiper-slide.visible ~ .swiper-slide
-{
+.first_section .swiper-slide.visible~.swiper-slide {
     visibility: visible;
 
     pointer-events: auto;
@@ -1344,8 +1200,7 @@ header .contacts .phone a:hover
 }
 
 
-.first_section .item
-{
+.first_section .item {
     color: currentColor;
 
     display: block;
@@ -1354,8 +1209,7 @@ header .contacts .phone a:hover
 }
 
 
-.first_section .item .thumb
-{
+.first_section .item .thumb {
     position: relative;
 
     overflow: hidden;
@@ -1366,8 +1220,7 @@ header .contacts .phone a:hover
     background: #ddd;
 }
 
-.first_section .item .thumb img
-{
+.first_section .item .thumb img {
     position: absolute;
     top: 0;
     left: 0;
@@ -1385,15 +1238,13 @@ header .contacts .phone a:hover
 /*----------
     Quiz
 ----------*/
-.quiz
-{
+.quiz {
     padding: 71px 0 55px;
     background: #ffffff;
 }
 
 
-.quiz .row
-{
+.quiz .row {
     display: flex;
 
     align-content: stretch;
@@ -1403,8 +1254,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .data
-{
+.quiz .data {
     position: relative;
     z-index: 4;
 
@@ -1415,14 +1265,12 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .head
-{
+.quiz .head {
     margin-bottom: 16px;
 }
 
 
-.quiz .count
-{
+.quiz .count {
     color: #000000;
     font-size: 12px;
     line-height: 100%;
@@ -1431,8 +1279,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .progress
-{
+.quiz .progress {
     width: 100%;
     height: 3px;
     margin-top: 8px;
@@ -1440,23 +1287,20 @@ header .contacts .phone a:hover
     background: #b5b5b5;
 }
 
-.quiz .progress div
-{
+.quiz .progress div {
     height: 3px;
     transition: width .3s linear;
     border-radius: 3px;
-    background: #004735;
+    background: #540728;
 }
 
 
-.quiz .step
-{
+.quiz .step {
     display: none;
 }
 
 
-.quiz .step .question
-{
+.quiz .step .question {
     color: #000000;
     font-size: 36px;
     font-weight: 500;
@@ -1465,8 +1309,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .step .exp
-{
+.quiz .step .exp {
     color: #8b8b8b;
     font-size: 16px;
     line-height: 120%;
@@ -1479,28 +1322,24 @@ header .contacts .phone a:hover
 
 
 
-.quiz .step .range
-{
+.quiz .step .range {
     padding-top: 8px;
 }
 
 
 
-.quiz .select
-{
+.quiz .select {
     position: relative;
 }
 
 
 
-.quiz select
-{
+.quiz select {
     display: none;
 }
 
 
-.quiz .nice-select
-{
+.quiz .nice-select {
     position: relative;
 
     display: block;
@@ -1509,8 +1348,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .nice-select .current
-{
+.quiz .nice-select .current {
     color: #000000;
     font-size: 24px;
     font-weight: 300;
@@ -1529,8 +1367,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .nice-select-dropdown
-{
+.quiz .nice-select-dropdown {
     position: absolute;
     z-index: 9;
     top: 100%;
@@ -1547,30 +1384,26 @@ header .contacts .phone a:hover
     background: #ffffff;
 }
 
-.quiz .nice-select.open .nice-select-dropdown
-{
+.quiz .nice-select.open .nice-select-dropdown {
     visibility: visible;
 
     opacity: 1;
 }
 
 
-.quiz .nice-select .list .option
-{
+.quiz .nice-select .list .option {
     color: #000000;
     font-size: 16px;
     padding: 8px 18px;
     cursor: pointer;
 }
 
-.quiz .nice-select .list .option:empty
-{
+.quiz .nice-select .list .option:empty {
     display: none;
 }
 
 
-.quiz .nice-select + .arr
-{
+.quiz .nice-select+.arr {
     position: absolute;
     z-index: 9;
     top: 0;
@@ -1588,8 +1421,7 @@ header .contacts .phone a:hover
 
 
 
-.quiz .radios
-{
+.quiz .radios {
     display: flex;
 
     margin-bottom: -12px;
@@ -1601,22 +1433,19 @@ header .contacts .phone a:hover
     justify-content: flex-start;
 }
 
-.quiz .radios > *
-{
+.quiz .radios>* {
     width: calc(33.333% - 12px);
     margin-bottom: 12px;
     margin-left: 12px;
 }
 
 
-.quiz .radios input
-{
+.quiz .radios input {
     display: none;
 }
 
 
-.quiz .radios label
-{
+.quiz .radios label {
     position: relative;
 
     display: block;
@@ -1625,8 +1454,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .radios label > div
-{
+.quiz .radios label>div {
     display: flex;
     padding: 24px 29px 24px 58px;
     transition: .2s linear;
@@ -1637,11 +1465,11 @@ header .contacts .phone a:hover
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start;
+    height: 100%;
 }
 
 
-.quiz .radios label .check
-{
+.quiz .radios label .check {
     color: #000000;
     position: absolute;
     top: 0;
@@ -1653,15 +1481,14 @@ header .contacts .phone a:hover
     margin: auto;
     transition: background .2s linear;
     border-radius: 50%;
-    border: 1px solid #00473554;
+    border: 1px solid #54072854;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.quiz .radios label .check .icon
-{
+.quiz .radios label .check .icon {
     display: block;
 
     width: 9px;
@@ -1673,35 +1500,30 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .radios label input:checked + div .check
-{
+.quiz .radios label input:checked+div .check {
     background: #fff;
 }
 
-.quiz .radios label input:checked + div .check .icon
-{
+.quiz .radios label input:checked+div .check .icon {
     opacity: 1;
 }
 
-.quiz .radios label .checked + div .check
-{
+.quiz .radios label .checked+div .check {
     background: #fff;
-    border: 1px solid #00473554;
+    border: 1px solid #54072854;
 }
 
-.quiz .radios label .checked + div .check .icon
-{
+.quiz .radios label .checked+div .check .icon {
     opacity: 1;
 }
 
-.quiz .radios label .wpcf7-form-control-wrap{
+.quiz .radios label .wpcf7-form-control-wrap {
     display: none !important;
 }
 
 
 
-.quiz .step1 .swiper
-{
+.quiz .step1 .swiper {
     overflow: visible !important;
 
     margin-top: -28px;
@@ -1709,8 +1531,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .step1 .swiper-slide
-{
+.quiz .step1 .swiper-slide {
     position: relative;
 
     visibility: hidden;
@@ -1721,8 +1542,7 @@ header .contacts .phone a:hover
     opacity: 0;
 }
 
-.quiz .step1 .swiper-slide.visible
-{
+.quiz .step1 .swiper-slide.visible {
     visibility: visible;
 
     pointer-events: auto;
@@ -1731,8 +1551,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .step1 label
-{
+.quiz .step1 label {
     position: relative;
 
     display: block;
@@ -1743,14 +1562,12 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .step1 label input
-{
+.quiz .step1 label input {
     display: none;
 }
 
 
-.quiz .step1 label .thumb
-{
+.quiz .step1 label .thumb {
     position: relative;
 
     overflow: hidden;
@@ -1761,8 +1578,7 @@ header .contacts .phone a:hover
     border-radius: 15px;
 }
 
-.quiz .step1 label .thumb img
-{
+.quiz .step1 label .thumb img {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -1773,12 +1589,13 @@ header .contacts .phone a:hover
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
+    image-rendering: smooth !important;
+    -ms-interpolation-mode: bicubic;
 }
 
 
-.quiz .step1 label .check
-{
+.quiz .step1 label .check {
     color: #000;
 
     position: absolute;
@@ -1802,8 +1619,7 @@ header .contacts .phone a:hover
     justify-content: center;
 }
 
-.quiz .step1 label .check .icon
-{
+.quiz .step1 label .check .icon {
     display: block;
 
     width: 9px;
@@ -1815,8 +1631,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .step1 label .name
-{
+.quiz .step1 label .name {
     font-size: 10px;
     line-height: 120%;
 
@@ -1842,51 +1657,43 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .step1 label input:checked ~ .check
-{
+.quiz .step1 label input:checked~.check {
     background: #fff;
 }
 
-.quiz .step1 label input:checked ~ .check .icon
-{
+.quiz .step1 label input:checked~.check .icon {
     opacity: 1;
 }
 
-.quiz .step1 label .checked ~ .check
-{
+.quiz .step1 label .checked~.check {
     background: #fff;
 }
 
-.quiz .step1 label .checked ~ .check .icon
-{
+.quiz .step1 label .checked~.check .icon {
     opacity: 1;
 }
 
 
-.quiz .step5
-{
+.quiz .step5 {
     margin-bottom: 40px;
     padding: 60px;
     border-radius: 15px;
     /* background: #efefef; */
-    border: 1px solid #004735;
+    border: 1px solid #540728;
 }
 
 
-.quiz .step5 .block_head
-{
+.quiz .step5 .block_head {
     margin-bottom: 36px;
 }
 
 
-.quiz .step5 .line
-{
+.quiz .step5 .line {
     margin-bottom: 27px;
 }
 
 
-.quiz .step5 .submit
-{
+.quiz .step5 .submit {
     display: flex;
 
     align-content: flex-start;
@@ -1895,15 +1702,13 @@ header .contacts .phone a:hover
     justify-content: space-between;
 }
 
-.quiz .step5 .submit_btn
-{
+.quiz .step5 .submit_btn {
     width: calc(50% - 5px);
     height: 58px;
 }
 
 
-.quiz .step5 .agree
-{
+.quiz .step5 .agree {
     width: calc(50% - 5px);
     margin-left: auto;
     padding: 0 8px;
@@ -1912,14 +1717,12 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .step .swiper-horizontal > .swiper-scrollbar
-{
+.quiz .step .swiper-horizontal>.swiper-scrollbar {
     margin-top: 12px;
 }
 
 
-.quiz .btns
-{
+.quiz .btns {
     display: flex;
 
     margin-top: auto;
@@ -1930,14 +1733,12 @@ header .contacts .phone a:hover
     justify-content: flex-start;
 }
 
-.quiz .btns > * + *
-{
+.quiz .btns>*+* {
     margin-left: 8px;
 }
 
 
-.quiz .prev_btn
-{
+.quiz .prev_btn {
     color: #060606;
 
     display: flex;
@@ -1956,8 +1757,7 @@ header .contacts .phone a:hover
     justify-content: center;
 }
 
-.quiz .prev_btn .icon
-{
+.quiz .prev_btn .icon {
     display: block;
 
     width: 10px;
@@ -1966,23 +1766,20 @@ header .contacts .phone a:hover
     transform: rotate(180deg);
 }
 
-.quiz .prev_btn:hover
-{
+.quiz .prev_btn:hover {
     color: #fff;
 
     background: #6f6f6f;
 }
 
-.quiz .prev_btn.disabled
-{
+.quiz .prev_btn.disabled {
     color: #060606;
     pointer-events: none;
     background: #e5e5e5;
 }
 
 
-.quiz .next_btn
-{
+.quiz .next_btn {
     color: #ffffff;
     font-size: 12px;
     font-weight: 500;
@@ -1995,15 +1792,14 @@ header .contacts .phone a:hover
     letter-spacing: .1em;
     text-transform: uppercase;
     border-radius: 8px;
-    background: #004735;
+    background: #540728;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.quiz .next_btn .icon
-{
+.quiz .next_btn .icon {
     display: block;
 
     width: 10px;
@@ -2011,22 +1807,19 @@ header .contacts .phone a:hover
     margin-left: 15px;
 }
 
-.quiz .next_btn:hover
-{
+.quiz .next_btn:hover {
     color: #fff;
-    background: #008362;
+    background: #540728;
 }
 
-.quiz .next_btn.disabled
-{
+.quiz .next_btn.disabled {
     color: #060606;
     pointer-events: none;
     background: #e5e5e5;
 }
 
 
-.quiz .col_right
-{
+.quiz .col_right {
     position: relative;
     z-index: 3;
     display: flex;
@@ -2042,8 +1835,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .manager
-{
+.quiz .manager {
     display: flex;
 
     margin-bottom: 40px;
@@ -2055,36 +1847,24 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .manager .photo
-{
+.quiz .manager .photo {
     position: relative;
-
     overflow: hidden;
-
     width: 60px;
     height: 60px;
-
-    border-radius: 50%;
 }
 
-.quiz .manager .photo img
-{
+.quiz .manager .photo img {
     position: absolute;
     top: 0;
     left: 0;
-
     display: block;
-
     width: 100%;
     height: 100%;
-
-    border-radius: 50%;
-
-    object-fit: cover;
+    object-fit: contain ;
 }
 
-.quiz .manager .photo + *
-{
+.quiz .manager .photo+* {
     width: calc(100% - 76px);
     margin-left: auto;
 
@@ -2092,8 +1872,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .manager .name
-{
+.quiz .manager .name {
     font-size: 24px;
     line-height: 100%;
 
@@ -2102,8 +1881,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .manager .post
-{
+.quiz .manager .post {
     color: #8b8b8b;
     line-height: 120%;
 
@@ -2111,8 +1889,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .manager .text
-{
+.quiz .manager .text {
     line-height: 120%;
 
     display: none;
@@ -2123,15 +1900,13 @@ header .contacts .phone a:hover
     letter-spacing: -.03em;
 }
 
-.quiz .manager .text > * + *
-{
+.quiz .manager .text>*+* {
     margin-top: 16px;
 }
 
 
 
-.quiz .contacts
-{
+.quiz .contacts {
     display: flex;
 
     margin-top: auto;
@@ -2143,8 +1918,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .contacts .phone
-{
+.quiz .contacts .phone {
     font-size: 18px;
     font-weight: 500;
     line-height: 120%;
@@ -2152,8 +1926,7 @@ header .contacts .phone a:hover
     letter-spacing: -.03em;
 }
 
-.quiz .contacts .phone a
-{
+.quiz .contacts .phone a {
     color: currentColor;
 
     transition: color .2s linear;
@@ -2161,14 +1934,12 @@ header .contacts .phone a:hover
     text-decoration: none;
 }
 
-.quiz .contacts .phone a:hover
-{
+.quiz .contacts .phone a:hover {
     color: #ababab;
 }
 
 
-.quiz .contacts .consult_btn
-{
+.quiz .contacts .consult_btn {
     font-size: 14px;
     line-height: 120%;
 
@@ -2181,14 +1952,23 @@ header .contacts .phone a:hover
     border-bottom: 1px solid #585555;
 }
 
-.quiz .contacts .consult_btn:hover
-{
+.quiz .contacts .consult_btn:hover {
     color: #b3b4b7;
 }
 
+.quiz .contacts .consult_btn {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
 
-.quiz .contacts .messengers
-{
+.quiz .contacts .consult_btn:hover {
+    color: #b3b4b7;
+    text-decoration: none;
+}
+
+
+.quiz .contacts .messengers {
     display: flex;
 
     margin-left: auto;
@@ -2200,8 +1980,7 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .contacts .messengers a
-{
+.quiz .contacts .messengers a {
     color: rgb(0 0 0) !important;
     display: flex;
     width: 44px;
@@ -2216,14 +1995,12 @@ header .contacts .phone a:hover
     justify-content: center;
 }
 
-.quiz .contacts .messengers a + a
-{
+.quiz .contacts .messengers a+a {
     margin-left: 8px;
 }
 
 
-.quiz .contacts .messengers .icon
-{
+.quiz .contacts .messengers .icon {
     display: block;
 
     width: 18px;
@@ -2231,84 +2008,29 @@ header .contacts .phone a:hover
 }
 
 
-.quiz .contacts .messengers a:hover
-{
+.quiz .contacts .messengers a:hover {
     background: #242424;
     color: #fff !important;
 }
 
 
-.quiz .what_we_give
-{
+.quiz .what_we_give {
     position: absolute;
     bottom: 0;
     left: 0;
-
     width: 100%;
-}
-
-
-.quiz .what_we_give .btn
-{
-    color: rgb(255 255 255);
-    line-height: 120%;
-    position: relative;
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 99px;
-    padding: 40px 38px;
-    transition: background .2s linear;
-    text-decoration: none;
-    letter-spacing: -.03em;
-    border-radius: 0 0 15px 15px;
-    background: #004735;
-    align-content: center;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    padding: 10px;
+    background: #540728;
+    border-radius: 0 0 15px 15px;
 }
 
 
-.quiz .what_we_give .btn .icon
-{
-    display: block;
-
-    width: 16px;
-    height: 11px;
-    margin-right: 10px;
-}
-
-.quiz .what_we_give .btn img
-{
-    position: absolute;
-    top: -8px;
-    right: 34px;
-
-    display: block;
-
-    width: 87px;
-    height: 114px;
-}
-
-.quiz .what_we_give .btn img + img
-{
-    display: none;
-}
-
-
-.quiz .what_we_give .btn:hover
-{
-    background: #041333;
-}
-
-.quiz .what_we_give .btn:hover img
-{
-    display: none;
-}
-
-.quiz .what_we_give .btn:hover img + img
-{
+.quiz .what_we_give img {
+    max-width: 80px;
+    height: auto;
     display: block;
 }
 
@@ -2317,8 +2039,7 @@ header .contacts .phone a:hover
 /*--------------
     Products
 --------------*/
-.products .advantages
-{
+.products .advantages {
     display: flex;
 
     margin-bottom: 30px;
@@ -2330,8 +2051,7 @@ header .contacts .phone a:hover
 }
 
 
-.products .advantages .item
-{
+.products .advantages .item {
     color: #fff;
     font-size: 18px;
     line-height: 100%;
@@ -2348,14 +2068,12 @@ header .contacts .phone a:hover
     justify-content: flex-start;
 }
 
-.products .advantages .item + .item
-{
+.products .advantages .item+.item {
     margin-left: 30px;
 }
 
 
-.products .advantages .item .icon
-{
+.products .advantages .item .icon {
     display: flex;
 
     width: 80px;
@@ -2370,14 +2088,12 @@ header .contacts .phone a:hover
     justify-content: center;
 }
 
-.products .advantages .item .icon + *
-{
+.products .advantages .item .icon+* {
     width: calc(100% - 106px);
     margin-left: 26px;
 }
 
-.products .advantages .item .icon img
-{
+.products .advantages .item .icon img {
     display: block;
 
     max-width: 100%;
@@ -2385,8 +2101,7 @@ header .contacts .phone a:hover
 }
 
 
-.products .mob_select
-{
+.products .mob_select {
     position: relative;
 
     display: none;
@@ -2395,14 +2110,12 @@ header .contacts .phone a:hover
 }
 
 
-.products .mob_select select
-{
+.products .mob_select select {
     display: none;
 }
 
 
-.products .mob_select .nice-select
-{
+.products .mob_select .nice-select {
     position: relative;
 
     display: block;
@@ -2411,8 +2124,7 @@ header .contacts .phone a:hover
 }
 
 
-.products .mob_select .nice-select .current
-{
+.products .mob_select .nice-select .current {
     color: #000;
     font-size: 10px;
     line-height: 45px;
@@ -2437,8 +2149,7 @@ header .contacts .phone a:hover
 }
 
 
-.products .mob_select .nice-select-dropdown
-{
+.products .mob_select .nice-select-dropdown {
     position: absolute;
     z-index: 9;
     top: 100%;
@@ -2458,16 +2169,14 @@ header .contacts .phone a:hover
     background: #eee;
 }
 
-.products .mob_select .nice-select.open .nice-select-dropdown
-{
+.products .mob_select .nice-select.open .nice-select-dropdown {
     visibility: visible;
 
     opacity: 1;
 }
 
 
-.products .mob_select .nice-select .list .option
-{
+.products .mob_select .nice-select .list .option {
     color: #000;
     font-size: 16px;
 
@@ -2476,14 +2185,12 @@ header .contacts .phone a:hover
     cursor: pointer;
 }
 
-.products .mob_select .nice-select .list .option:empty
-{
+.products .mob_select .nice-select .list .option:empty {
     display: none;
 }
 
 
-.products .mob_select .nice-select + .arr
-{
+.products .mob_select .nice-select+.arr {
     color: #000;
 
     position: absolute;
@@ -2502,8 +2209,7 @@ header .contacts .phone a:hover
 }
 
 
-.products .row
-{
+.products .row {
     margin-bottom: -37px;
     margin-left: -27px;
 
@@ -2511,23 +2217,20 @@ header .contacts .phone a:hover
     align-items: stretch;
 }
 
-.products .row > *
-{
+.products .row>* {
     width: calc(33.333% - 27px);
     margin-bottom: 37px;
     margin-left: 27px;
 }
 
 
-.products .product
-{
+.products .product {
     position: relative;
     cursor: pointer;
 }
 
 
-.products .product .stickers
-{
+.products .product .stickers {
     position: absolute;
     z-index: 3;
     top: 14px;
@@ -2542,8 +2245,7 @@ header .contacts .phone a:hover
 }
 
 
-.products .product .sticker
-{
+.products .product .sticker {
     font-size: 10px;
     font-weight: 500;
     line-height: 100%;
@@ -2555,23 +2257,20 @@ header .contacts .phone a:hover
     text-transform: uppercase;
 }
 
-.products .product .sticker.new
-{
+.products .product .sticker.new {
     background: rgba(238, 238, 238, .1);
 
     backdrop-filter: blur(15px);
 }
 
-.products .product .sticker.discount
-{
+.products .product .sticker.discount {
     background: #000;
 
     backdrop-filter: blur(15px);
 }
 
 
-.products .product .thumb
-{
+.products .product .thumb {
     position: relative;
 
     overflow: hidden;
@@ -2582,8 +2281,7 @@ header .contacts .phone a:hover
     border-radius: 15px;
 }
 
-.products .product .thumb img
-{
+.products .product .thumb img {
     position: absolute;
     top: 0;
     left: 0;
@@ -2600,16 +2298,14 @@ header .contacts .phone a:hover
     object-fit: cover;
 }
 
-.products .product .thumb img + img
-{
+.products .product .thumb img+img {
     z-index: 1;
 
     opacity: 0;
 }
 
 
-.products .product .info
-{
+.products .product .info {
     display: flex;
 
     padding: 0 7px;
@@ -2621,16 +2317,14 @@ header .contacts .phone a:hover
 }
 
 
-.products .product .name
-{
+.products .product .name {
     color: #fff;
     font-size: 20px;
     line-height: 100%;
 }
 
 
-.products .product .price
-{
+.products .product .price {
     color: #fff;
     font-size: 15px;
     font-weight: 500;
@@ -2643,8 +2337,7 @@ header .contacts .phone a:hover
 }
 
 
-.products .product .btns
-{
+.products .product .btns {
     display: flex;
 
     width: 100%;
@@ -2656,14 +2349,12 @@ header .contacts .phone a:hover
     justify-content: space-between;
 }
 
-.products .product .btns > * + *
-{
+.products .product .btns>*+* {
     margin-left: 9px;
 }
 
 
-.products .product .btn
-{
+.products .product .btn {
     color: #fff;
     font-size: 10px;
     font-weight: 500;
@@ -2680,8 +2371,7 @@ header .contacts .phone a:hover
     border-radius: 8px;
 }
 
-.products .product .btn:hover
-{
+.products .product .btn:hover {
     color: #000;
 
     border-color: #fff;
@@ -2689,14 +2379,12 @@ header .contacts .phone a:hover
 }
 
 
-.products .product .btn.blue
-{
+.products .product .btn.blue {
     border-color: #183062;
     background: #183062;
 }
 
-.products .product .btn.blue:hover
-{
+.products .product .btn.blue:hover {
     color: #fff;
 
     border-color: #102041;
@@ -2704,27 +2392,23 @@ header .contacts .phone a:hover
 }
 
 
-.products .product:hover .thumb img
-{
+.products .product:hover .thumb img {
     opacity: 0;
 }
 
-.products .product:hover .thumb img + img
-{
+.products .product:hover .thumb img+img {
     opacity: 1;
 }
 
 
-.products .all_link
-{
+.products .all_link {
     margin-top: 50px;
 
     text-align: center;
 }
 
 
-.products .all_link a
-{
+.products .all_link a {
     color: #060606;
     font-size: 12px;
     font-weight: 500;
@@ -2745,8 +2429,7 @@ header .contacts .phone a:hover
     background: #fff;
 }
 
-.products .all_link a:hover
-{
+.products .all_link a:hover {
     background: #6f6f6f;
 }
 
@@ -2755,8 +2438,7 @@ header .contacts .phone a:hover
 /*------------------
     Action block
 ------------------*/
-.action_block .data
-{
+.action_block .data {
     position: relative;
 
     padding: 100px 216px;
@@ -2765,8 +2447,7 @@ header .contacts .phone a:hover
 }
 
 
-.action_block .info
-{
+.action_block .info {
     position: relative;
     z-index: 3;
 
@@ -2777,14 +2458,12 @@ header .contacts .phone a:hover
 }
 
 
-.action_block .block_head
-{
+.action_block .block_head {
     margin-bottom: 28px;
 }
 
 
-.action_block .form
-{
+.action_block .form {
     display: flex;
 
     width: 488px;
@@ -2798,21 +2477,18 @@ header .contacts .phone a:hover
 }
 
 
-.action_block .form > *
-{
+.action_block .form>* {
     width: calc(50% - 8px);
     margin-bottom: 0;
 }
 
-.action_block .form > *.agree
-{
+.action_block .form>*.agree {
     width: 100%;
     margin-top: 14px;
 }
 
 
-.action_block .bg
-{
+.action_block .bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -2827,8 +2503,7 @@ header .contacts .phone a:hover
     object-fit: cover;
 }
 
-.action_block .bg.loaded
-{
+.action_block .bg.loaded {
     opacity: .5;
 }
 
@@ -2837,8 +2512,7 @@ header .contacts .phone a:hover
 /*-----------------
     Accessories
 -----------------*/
-.accessories .row
-{
+.accessories .row {
     margin-bottom: -28px;
     margin-left: -28px;
 
@@ -2847,16 +2521,14 @@ header .contacts .phone a:hover
     justify-content: center;
 }
 
-.accessories .row > *
-{
+.accessories .row>* {
     width: calc(33.333% - 28px);
     margin-bottom: 28px;
     margin-left: 28px;
 }
 
 
-.accessories .item
-{
+.accessories .item {
     color: currentColor;
 
     position: relative;
@@ -2867,8 +2539,7 @@ header .contacts .phone a:hover
 }
 
 
-.accessories .item .thumb
-{
+.accessories .item .thumb {
     position: relative;
 
     overflow: hidden;
@@ -2878,8 +2549,7 @@ header .contacts .phone a:hover
     border-radius: 15px;
 }
 
-.accessories .item .thumb:after
-{
+.accessories .item .thumb:after {
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -2896,8 +2566,7 @@ header .contacts .phone a:hover
 }
 
 
-.accessories .item .thumb img
-{
+.accessories .item .thumb img {
     position: absolute;
     top: 0;
     left: 0;
@@ -2913,8 +2582,7 @@ header .contacts .phone a:hover
 }
 
 
-.accessories .item .name
-{
+.accessories .item .name {
     font-size: 14px;
     line-height: 100%;
 
@@ -2936,40 +2604,35 @@ header .contacts .phone a:hover
 /*-------------
     Gallery
 -------------*/
-.gallery
-{
+.gallery {
     padding: 60px 0;
 
     background: #0e0e0e;
 }
 
 
-.gallery .swiper
-{
+.gallery .swiper {
     overflow: visible !important;
 
     cursor: url(../images/cursor_scroll.svg) 24 24, pointer;
 }
 
 
-.gallery .swiper-slide
-{
+.gallery .swiper-slide {
     transition: opacity .2s linear;
     pointer-events: none;
 
     opacity: .5;
 }
 
-.gallery .swiper-slide.visible
-{
+.gallery .swiper-slide.visible {
     pointer-events: auto;
 
     opacity: 1;
 }
 
 
-.gallery .item
-{
+.gallery .item {
     color: currentColor;
 
     display: block;
@@ -2978,8 +2641,7 @@ header .contacts .phone a:hover
 }
 
 
-.gallery .item .thumb
-{
+.gallery .item .thumb {
     position: relative;
 
     overflow: hidden;
@@ -2989,8 +2651,7 @@ header .contacts .phone a:hover
     border-radius: 15px;
 }
 
-.gallery .item .thumb:after
-{
+.gallery .item .thumb:after {
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -3007,8 +2668,7 @@ header .contacts .phone a:hover
 }
 
 
-.gallery .item .thumb img
-{
+.gallery .item .thumb img {
     position: absolute;
     top: 0;
     left: 0;
@@ -3024,8 +2684,7 @@ header .contacts .phone a:hover
 }
 
 
-.gallery .item .name
-{
+.gallery .item .name {
     font-size: 14px;
     line-height: 100%;
 
@@ -3043,8 +2702,7 @@ header .contacts .phone a:hover
 }
 
 
-.gallery .btn360
-{
+.gallery .btn360 {
     display: flex;
 
     margin-top: 46px;
@@ -3056,8 +2714,7 @@ header .contacts .phone a:hover
 }
 
 
-.gallery .btn360 .btn
-{
+.gallery .btn360 .btn {
     font-size: 12px;
     font-weight: 500;
     line-height: 100%;
@@ -3080,8 +2737,7 @@ header .contacts .phone a:hover
     justify-content: center;
 }
 
-.gallery .btn360 .btn .icon
-{
+.gallery .btn360 .btn .icon {
     display: block;
 
     width: 45px;
@@ -3089,8 +2745,7 @@ header .contacts .phone a:hover
     margin-left: 15px;
 }
 
-.gallery .btn360 .btn:hover
-{
+.gallery .btn360 .btn:hover {
     background: #102041;
 }
 
@@ -3099,14 +2754,12 @@ header .contacts .phone a:hover
 /*-------------
     Reviews
 -------------*/
-.reviews .row
-{
+.reviews .row {
     margin-bottom: -13px;
     margin-left: -13px;
 }
 
-.reviews .row > *
-{
+.reviews .row>* {
     width: calc(25% - 13px);
     margin-bottom: 13px;
     margin-left: 13px;
@@ -3114,14 +2767,12 @@ header .contacts .phone a:hover
 
 
 .reviews .swiper-button-next,
-.reviews .swiper-button-prev
-{
+.reviews .swiper-button-prev {
     display: none;
 }
 
 
-.reviews .item
-{
+.reviews .item {
     color: currentColor;
 
     display: block;
@@ -3130,8 +2781,7 @@ header .contacts .phone a:hover
 }
 
 
-.reviews .item .thumb
-{
+.reviews .item .thumb {
     position: relative;
 
     overflow: hidden;
@@ -3141,8 +2791,7 @@ header .contacts .phone a:hover
     border-radius: 15px;
 }
 
-.reviews .item .thumb img
-{
+.reviews .item .thumb img {
     position: absolute;
     top: 0;
     left: 0;
@@ -3158,8 +2807,7 @@ header .contacts .phone a:hover
 }
 
 
-.reviews .item .icon
-{
+.reviews .item .icon {
     color: #fff;
 
     position: absolute;
@@ -3182,8 +2830,7 @@ header .contacts .phone a:hover
     backdrop-filter: blur(15px);
 }
 
-.reviews .item .icon svg
-{
+.reviews .item .icon svg {
     display: block;
 
     width: 28px;
@@ -3195,8 +2842,7 @@ header .contacts .phone a:hover
 /*----------------
     Order .form
 ----------------*/
-.order_form .data
-{
+.order_form .data {
     position: relative;
 
     border-radius: 15px;
@@ -3204,28 +2850,24 @@ header .contacts .phone a:hover
 }
 
 
-.order_form .info
-{
+.order_form .info {
     width: 726px;
     max-width: 100%;
     padding: 50px 60px;
 }
 
 
-.order_form .block_head
-{
+.order_form .block_head {
     margin-bottom: 41px;
 }
 
 
-.order_form .form .line
-{
+.order_form .form .line {
     margin-bottom: 27px;
 }
 
 
-.order_form .form .submit
-{
+.order_form .form .submit {
     display: flex;
 
     align-content: flex-start;
@@ -3234,14 +2876,12 @@ header .contacts .phone a:hover
     justify-content: space-between;
 }
 
-.order_form .form .submit_btn
-{
+.order_form .form .submit_btn {
     width: calc(50% - 5px);
 }
 
 
-.order_form .form .agree
-{
+.order_form .form .agree {
     width: calc(50% - 5px);
     margin-left: auto;
     padding: 0 8px;
@@ -3250,8 +2890,7 @@ header .contacts .phone a:hover
 }
 
 
-.order_form .image
-{
+.order_form .image {
     position: absolute;
     top: 0;
     right: 0;
@@ -3264,8 +2903,7 @@ header .contacts .phone a:hover
     border-radius: 0 15px 15px 0;
 }
 
-.order_form .image img
-{
+.order_form .image img {
     position: absolute;
     top: 0;
     left: 0;
@@ -3283,28 +2921,24 @@ header .contacts .phone a:hover
 /*-----------
     Stars
 -----------*/
-.stars .swiper
-{
+.stars .swiper {
     overflow: visible !important;
 
     cursor: url(../images/cursor_scroll.svg) 24 24, pointer;
 }
 
 
-.stars .swiper-slide
-{
+.stars .swiper-slide {
     align-self: center;
 }
 
 
-.stars .swiper-horizontal > .swiper-scrollbar
-{
+.stars .swiper-horizontal>.swiper-scrollbar {
     margin-top: 46px;
 }
 
 
-.stars .item
-{
+.stars .item {
     color: currentColor;
 
     display: block;
@@ -3314,8 +2948,7 @@ header .contacts .phone a:hover
 }
 
 
-.stars .item .thumb
-{
+.stars .item .thumb {
     position: relative;
 
     overflow: hidden;
@@ -3326,13 +2959,11 @@ header .contacts .phone a:hover
     border-radius: 15px;
 }
 
-.stars .item .thumb.big
-{
+.stars .item .thumb.big {
     padding-bottom: 148.275%;
 }
 
-.stars .item .thumb img
-{
+.stars .item .thumb img {
     position: absolute;
     top: 0;
     left: 0;
@@ -3346,8 +2977,7 @@ header .contacts .phone a:hover
 }
 
 
-.stars .item .name
-{
+.stars .item .name {
     color: #eee;
     font-size: 14px;
     line-height: 100%;
@@ -3361,22 +2991,19 @@ header .contacts .phone a:hover
 /*---------------------
     Social networks
 ---------------------*/
-.social_networks .row
-{
+.social_networks .row {
     margin-bottom: -13px;
     margin-left: -13px;
 }
 
-.social_networks .row > *
-{
+.social_networks .row>* {
     width: calc(20% - 13px);
     margin-bottom: 13px;
     margin-left: 13px;
 }
 
 
-.social_networks .item .thumb
-{
+.social_networks .item .thumb {
     position: relative;
 
     overflow: hidden;
@@ -3386,8 +3013,7 @@ header .contacts .phone a:hover
     border-radius: 8px;
 }
 
-.social_networks .item .thumb img
-{
+.social_networks .item .thumb img {
     position: absolute;
     top: 0;
     left: 0;
@@ -3401,8 +3027,7 @@ header .contacts .phone a:hover
 }
 
 
-.social_networks .btns
-{
+.social_networks .btns {
     display: flex;
 
     margin-top: 30px;
@@ -3413,14 +3038,12 @@ header .contacts .phone a:hover
     justify-content: center;
 }
 
-.social_networks .btns > * + *
-{
+.social_networks .btns>*+* {
     margin-left: 9px;
 }
 
 
-.social_networks .btns .btn
-{
+.social_networks .btns .btn {
     color: #eee;
     font-size: 12px;
     font-weight: 500;
@@ -3447,8 +3070,7 @@ header .contacts .phone a:hover
 }
 
 
-.social_networks .btns .btn .icon
-{
+.social_networks .btns .btn .icon {
     display: block;
 
     width: 17px;
@@ -3456,21 +3078,18 @@ header .contacts .phone a:hover
     margin-right: 10px;
 }
 
-.social_networks .btns .btn.vk_link .icon
-{
+.social_networks .btns .btn.vk_link .icon {
     width: 18px;
     height: 11px;
 }
 
 
-.social_networks .btns .btn:hover
-{
+.social_networks .btns .btn:hover {
     background: #102041;
 }
 
 
-.social_networks .btns .exp
-{
+.social_networks .btns .exp {
     color: #999b9b;
     font-size: 10px;
     line-height: 100%;
@@ -3487,8 +3106,7 @@ header .contacts .phone a:hover
 /*-------------------
     Contacts info
 -------------------*/
-.contacts_info .data
-{
+.contacts_info .data {
     position: relative;
 
     overflow: hidden;
@@ -3498,22 +3116,19 @@ header .contacts .phone a:hover
 }
 
 
-.contacts_info .info
-{
+.contacts_info .info {
     width: 464px;
     max-width: 100%;
     padding: 50px;
 }
 
 
-.contacts_info .block_head
-{
+.contacts_info .block_head {
     margin-bottom: 24px;
 }
 
 
-.contacts_info .tabs
-{
+.contacts_info .tabs {
     margin-bottom: 28px;
     margin-left: -8px;
 
@@ -3522,8 +3137,7 @@ header .contacts .phone a:hover
 
 
 .contacts_info .tabs button,
-.contacts_info .tabs button + button
-{
+.contacts_info .tabs button+button {
     width: auto;
     margin-bottom: 8px;
     margin-left: 8px;
@@ -3533,29 +3147,25 @@ header .contacts .phone a:hover
     background: #fff;
 }
 
-.contacts_info .tabs button:hover
-{
+.contacts_info .tabs button:hover {
     color: #fff;
 
     background: #6f6f6f;
 }
 
-.contacts_info .tabs button.active
-{
+.contacts_info .tabs button.active {
     color: #fff;
 
     background: #252525;
 }
 
 
-.contacts_info .item + .item
-{
+.contacts_info .item+.item {
     margin-top: 22px;
 }
 
 
-.contacts_info .item .label
-{
+.contacts_info .item .label {
     font-size: 12px;
     line-height: 120%;
 
@@ -3566,8 +3176,7 @@ header .contacts .phone a:hover
 }
 
 
-.contacts_info .item .val
-{
+.contacts_info .item .val {
     font-size: 22px;
     font-weight: 500;
     line-height: 120%;
@@ -3575,8 +3184,7 @@ header .contacts .phone a:hover
     letter-spacing: -.03em;
 }
 
-.contacts_info .item .val a
-{
+.contacts_info .item .val a {
     color: currentColor;
 
     white-space: nowrap;
@@ -3584,8 +3192,7 @@ header .contacts .phone a:hover
 }
 
 
-.contacts_info .item .metro
-{
+.contacts_info .item .metro {
     font-size: 18px;
     line-height: 120%;
 
@@ -3601,8 +3208,7 @@ header .contacts .phone a:hover
     justify-content: flex-start;
 }
 
-.contacts_info .item .metro .icon
-{
+.contacts_info .item .metro .icon {
     font-size: 12px;
     line-height: 24px;
 
@@ -3618,14 +3224,12 @@ header .contacts .phone a:hover
     background: #8647b2;
 }
 
-.contacts_info .item .metro .icon + *
-{
+.contacts_info .item .metro .icon+* {
     width: calc(100% - 36px);
 }
 
 
-.contacts_info .order_btn
-{
+.contacts_info .order_btn {
     font-size: 12px;
     font-weight: 500;
     line-height: 100%;
@@ -3642,14 +3246,12 @@ header .contacts .phone a:hover
     background: #1d3870;
 }
 
-.contacts_info .order_btn:hover
-{
+.contacts_info .order_btn:hover {
     background: #102041;
 }
 
 
-.contacts_info .map
-{
+.contacts_info .map {
     position: absolute;
     top: 0;
     right: 0;
@@ -3663,15 +3265,13 @@ header .contacts .phone a:hover
 /*------------------
     Product info
 ------------------*/
-.product_info > .row
-{
+.product_info>.row {
     align-items: stretch;
     align-content: stretch;
 }
 
 
-.product_info .images
-{
+.product_info .images {
     display: flex;
 
     width: calc(100% - 444px);
@@ -3683,21 +3283,18 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .images .swiper
-{
+.product_info .images .swiper {
     height: 605px;
 }
 
 
-.product_info .images .thumbs
-{
+.product_info .images .thumbs {
     width: 130px;
     max-width: 100%;
 }
 
 
-.product_info .images .thumbs .btn
-{
+.product_info .images .thumbs .btn {
     position: relative;
 
     display: block;
@@ -3709,8 +3306,7 @@ header .contacts .phone a:hover
     border-radius: 8px;
 }
 
-.product_info .images .thumbs .btn img
-{
+.product_info .images .thumbs .btn img {
     position: absolute;
     top: 0;
     left: 0;
@@ -3726,8 +3322,7 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .images .big
-{
+.product_info .images .big {
     overflow: hidden;
 
     width: calc(100% - 148px);
@@ -3737,8 +3332,7 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .images .big .image
-{
+.product_info .images .big .image {
     position: relative;
 
     overflow: hidden;
@@ -3748,8 +3342,7 @@ header .contacts .phone a:hover
     border-radius: 8px;
 }
 
-.product_info .images .big .image img
-{
+.product_info .images .big .image img {
     position: absolute;
     top: 0;
     left: 0;
@@ -3765,19 +3358,16 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .images .swiper-button-prev
-{
+.product_info .images .swiper-button-prev {
     left: 7px;
 }
 
-.product_info .images .swiper-button-next
-{
+.product_info .images .swiper-button-next {
     right: 7px;
 }
 
 
-.product_info .data
-{
+.product_info .data {
     display: flex;
     flex-direction: column;
 
@@ -3787,8 +3377,7 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .product_name
-{
+.product_info .product_name {
     color: #fff;
     font-size: 50px;
     font-weight: 500;
@@ -3796,8 +3385,7 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .price
-{
+.product_info .price {
     color: #fff;
     font-size: 22px;
     font-weight: 500;
@@ -3808,8 +3396,7 @@ header .contacts .phone a:hover
     text-transform: uppercase;
 }
 
-.product_info .price .old
-{
+.product_info .price .old {
     font-size: 16px;
     font-weight: 400;
     line-height: 100%;
@@ -3821,8 +3408,7 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .tags
-{
+.product_info .tags {
     display: flex;
 
     margin-top: 18px;
@@ -3835,8 +3421,7 @@ header .contacts .phone a:hover
     justify-content: flex-start;
 }
 
-.product_info .tags > *
-{
+.product_info .tags>* {
     color: #fff;
     font-size: 16px;
     font-weight: 300;
@@ -3853,19 +3438,16 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .options
-{
+.product_info .options {
     margin-top: 30px;
 }
 
-.product_info .options > * + *
-{
+.product_info .options>*+* {
     margin-top: 20px;
 }
 
 
-.product_info .options .label
-{
+.product_info .options .label {
     font-size: 12px;
     line-height: 100%;
 
@@ -3874,8 +3456,7 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .options .val
-{
+.product_info .options .val {
     font-size: 22px;
     line-height: 120%;
 
@@ -3883,16 +3464,14 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .order
-{
+.product_info .order {
     width: 305px;
     max-width: 100%;
     margin-top: auto;
 }
 
 
-.product_info .order .title
-{
+.product_info .order .title {
     font-size: 22px;
     font-weight: 300;
     line-height: 120%;
@@ -3901,13 +3480,11 @@ header .contacts .phone a:hover
 }
 
 
-.product_info .order .form .line
-{
+.product_info .order .form .line {
     margin-bottom: 16px;
 }
 
-.product_info .order .form .agree
-{
+.product_info .order .form .agree {
     margin-top: 14px;
 }
 
@@ -3916,16 +3493,14 @@ header .contacts .phone a:hover
 /*------------
     Footer
 ------------*/
-footer
-{
+footer {
     padding: 10px 0;
 
     border-top: 1px solid rgba(238, 238, 238, .16);
 }
 
 
-footer .cont
-{
+footer .cont {
     align-content: center;
     align-items: center;
     justify-content: space-between;
@@ -3933,8 +3508,7 @@ footer .cont
 
 
 
-footer .logo
-{
+footer .logo {
     color: currentColor;
 
     display: block;
@@ -3942,15 +3516,13 @@ footer .logo
     text-decoration: none;
 }
 
-footer .logo img
-{
+footer .logo img {
     display: block;
 }
 
 
 
-footer .sep
-{
+footer .sep {
     width: 1px;
     height: 44px;
 
@@ -3960,8 +3532,7 @@ footer .sep
 
 
 
-footer .contacts
-{
+footer .contacts {
     display: flex;
 
     align-content: center;
@@ -3970,14 +3541,12 @@ footer .contacts
     justify-content: flex-start;
 }
 
-footer .contacts > * + *
-{
+footer .contacts>*+* {
     margin-left: 35px;
 }
 
 
-footer .contacts .messengers
-{
+footer .contacts .messengers {
     display: flex;
 
     align-content: center;
@@ -3987,8 +3556,7 @@ footer .contacts .messengers
 }
 
 
-footer .contacts .messengers a
-{
+footer .contacts .messengers a {
     color: currentColor;
 
     display: block;
@@ -3996,28 +3564,24 @@ footer .contacts .messengers a
     text-decoration: none;
 }
 
-footer .contacts .messengers a + a
-{
+footer .contacts .messengers a+a {
     margin-left: 11px;
 }
 
 
-footer .contacts .messengers .icon
-{
+footer .contacts .messengers .icon {
     display: block;
 
     width: 17px;
     height: 17px;
 }
 
-footer .contacts .messengers .telegram_link .icon
-{
+footer .contacts .messengers .telegram_link .icon {
     width: 18px;
 }
 
 
-footer .contacts .location
-{
+footer .contacts .location {
     font-size: 16px;
     line-height: 120%;
 
@@ -4029,8 +3593,7 @@ footer .contacts .location
 }
 
 
-footer .contacts .phone
-{
+footer .contacts .phone {
     font-size: 18px;
     font-weight: 500;
     line-height: 120%;
@@ -4038,8 +3601,7 @@ footer .contacts .phone
     letter-spacing: -.03em;
 }
 
-footer .contacts .phone a
-{
+footer .contacts .phone a {
     color: currentColor;
 
     white-space: nowrap;
@@ -4048,8 +3610,7 @@ footer .contacts .phone a
 
 
 
-footer .privacy_policy_link a
-{
+footer .privacy_policy_link a {
     color: #626566;
     font-size: 14px;
     line-height: 100%;
@@ -4064,8 +3625,7 @@ footer .privacy_policy_link a
 
 
 
-footer .creator
-{
+footer .creator {
     color: #626566;
     font-size: 10px;
     line-height: 120%;
@@ -4074,8 +3634,7 @@ footer .creator
     text-transform: uppercase;
 }
 
-footer .creator a
-{
+footer .creator a {
     color: var(--text_color);
     font-size: 20px;
     line-height: 120%;
@@ -4093,8 +3652,7 @@ footer .creator a
 /*-----------
     PopUp
 -----------*/
-.modal
-{
+.modal {
     color: #ffffff;
     display: none;
     visibility: visible !important;
@@ -4107,15 +3665,13 @@ footer .creator a
 
 
 
-#order_modal
-{
+#order_modal {
     width: 1137px;
     padding: 100px 216px;
 }
 
 
-#order_modal .info
-{
+#order_modal .info {
     position: relative;
     z-index: 3;
 
@@ -4126,14 +3682,12 @@ footer .creator a
 }
 
 
-#order_modal .block_head
-{
+#order_modal .block_head {
     margin-bottom: 28px;
 }
 
 
-#order_modal .form
-{
+#order_modal .form {
     display: flex;
 
     width: 488px;
@@ -4148,21 +3702,18 @@ footer .creator a
 }
 
 
-#order_modal .form > *
-{
+#order_modal .form>* {
     width: calc(50% - 8px);
     margin-bottom: 0;
 }
 
-#order_modal .form > *.agree
-{
+#order_modal .form>*.agree {
     width: 100%;
     margin-top: 14px;
 }
 
 
-#order_modal .bg
-{
+#order_modal .bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -4177,15 +3728,14 @@ footer .creator a
     object-fit: cover;
 }
 
-#order_modal .bg.loaded
-{
+#order_modal .bg.loaded {
     opacity: .5;
 }
 
 
 
-#order_modal2, #order_modal3
-{
+#order_modal2,
+#order_modal3 {
     width: 726px;
     padding: 50px 60px;
 
@@ -4193,20 +3743,20 @@ footer .creator a
 }
 
 
-#order_modal2 .block_head, #order_modal3 .block_head
-{
+#order_modal2 .block_head,
+#order_modal3 .block_head {
     margin-bottom: 41px;
 }
 
 
-#order_modal2 .form .line, #order_modal3 .form .line
-{
+#order_modal2 .form .line,
+#order_modal3 .form .line {
     margin-bottom: 27px;
 }
 
 
-#order_modal2 .form .submit, #order_modal3 .form .submit
-{
+#order_modal2 .form .submit,
+#order_modal3 .form .submit {
     display: flex;
 
     align-content: flex-start;
@@ -4215,14 +3765,14 @@ footer .creator a
     justify-content: space-between;
 }
 
-#order_modal2 .form .submit_btn, #order_modal3 .form .submit_btn
-{
+#order_modal2 .form .submit_btn,
+#order_modal3 .form .submit_btn {
     width: calc(50% - 5px);
 }
 
 
-#order_modal2 .form .agree, #order_modal3 .form .agree
-{
+#order_modal2 .form .agree,
+#order_modal3 .form .agree {
     width: calc(50% - 5px);
     margin-left: auto;
     padding: 0 8px;
@@ -4232,14 +3782,12 @@ footer .creator a
 
 
 
-#success_modal .block_head
-{
+#success_modal .block_head {
     margin-bottom: 30px;
 }
 
 
-#success_modal .image
-{
+#success_modal .image {
     position: relative;
 
     overflow: hidden;
@@ -4249,8 +3797,7 @@ footer .creator a
     border-radius: 8px;
 }
 
-#success_modal .image img
-{
+#success_modal .image img {
     position: absolute;
     top: 0;
     left: 0;
@@ -4264,8 +3811,7 @@ footer .creator a
 }
 
 
-#success_modal .close_btn
-{
+#success_modal .close_btn {
     color: #ffffff;
     font-size: 12px;
     font-weight: 500;
@@ -4278,11 +3824,10 @@ footer .creator a
     letter-spacing: .1em;
     text-transform: uppercase;
     border-radius: 8px;
-    background: #00694e;
+    background: #540728;
 }
 
-#success_modal .close_btn:hover
-{
+#success_modal .close_btn:hover {
     color: #eee;
 
     background: #6f6f6f;
@@ -4290,8 +3835,7 @@ footer .creator a
 
 
 
-#product_modal
-{
+#product_modal {
     display: inline-block;
 
     width: 1056px;
@@ -4299,33 +3843,33 @@ footer .creator a
 
 
 
-#map_modal
-{
+#map_modal {
     width: 760px;
     height: 576px;
     padding: 15px;
 }
 
 
-#map_modal.fancybox__content > .carousel__button.is-close,
-#map_modal + .carousel__button.is-close
-{
+#map_modal.fancybox__content>.carousel__button.is-close,
+#map_modal+.carousel__button.is-close {
     top: 0;
     right: -27px;
 }
+
 /*ТОлько это*/
-.quiz .data .wpcf7{
+.quiz .data .wpcf7 {
     height: 100%;
     display: flex;
     width: 97%;
 }
-.quiz .data .wpcf7 .form{
+
+.quiz .data .wpcf7 .form {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.quiz .select .wpcf7-form-control-wrap  + .arr {
+.quiz .select .wpcf7-form-control-wrap+.arr {
     position: absolute;
     z-index: 9;
     top: 0;
@@ -4338,39 +3882,59 @@ footer .creator a
     pointer-events: none;
 }
 
+/* Стили для полей ввода размера костюма */
+.quiz .size_inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Увеличиваем расстояние между полями */
+}
 
-.wpcf7-form-control-wrap[data-name="agree"] .wpcf7-form-control{
+.quiz .size_field {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz .size_field .label {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 8px;
+}
+
+
+.wpcf7-form-control-wrap[data-name="agree"] .wpcf7-form-control {
     display: none;
 }
 
-.wpcf7-form-control-wrap[data-name="agree"].checked ~ .check .icon
-{
+.wpcf7-form-control-wrap[data-name="agree"].checked~.check .icon {
     opacity: 1;
 }
 
-.wpcf7 .form .wpcf7-response-output{
+.wpcf7 .form .wpcf7-response-output {
     display: none;
 }
 
-.form .contact .field .wpcf7-list-item-label{
+.form .contact .field .wpcf7-list-item-label {
     display: none;
 }
 
-.form .contact .field .wpcf7-form-control-wrap{
+.form .contact .field .wpcf7-form-control-wrap {
     display: none;
 }
 
-.step1 .wpcf7-list-item-label{
-    display: none;
-}
-
-
-.products .product.hide{
+.step1 .wpcf7-list-item-label {
     display: none;
 }
 
 
-.carousel__button svg{
+.products .product.hide {
+    display: none;
+}
+
+
+.carousel__button svg {
     width: 20px;
     height: 20px;
     stroke-width: 1;
@@ -4389,13 +3953,12 @@ footer .creator a
 
 
 @media print,
-(max-width: 1023px)
-{
+(max-width: 1023px) {
+
     /*-------------------
         Global styles
     -------------------*/
-    :root
-    {
+    :root {
         --font_size: 15px;
         --font_size_title: 40px;
     }
@@ -4403,46 +3966,39 @@ footer .creator a
     /*----------
         Quiz
     ----------*/
-    .quiz .data
-    {
+    .quiz .data {
         width: 100%;
     }
 
 
-    .quiz .step .question
-    {
+    .quiz .step .question {
         font-size: 30px;
     }
 
 
     .quiz .step1 .swiper,
-    .quiz .step5
-    {
+    .quiz .step5 {
         margin-bottom: 0;
     }
 
 
-    .quiz .btns
-    {
+    .quiz .btns {
         margin-top: 28px;
     }
 
 
-    .quiz .prev_btn
-    {
+    .quiz .prev_btn {
         width: 52px;
         height: 52px;
     }
 
-    .quiz .next_btn
-    {
+    .quiz .next_btn {
         width: 240px;
         height: 52px;
     }
 
 
-    .quiz .col_right
-    {
+    .quiz .col_right {
         width: 100%;
         min-height: 0;
         margin-top: 40px;
@@ -4450,53 +4006,102 @@ footer .creator a
     }
 
 
-    .quiz .what_we_give .btn
-    {
+    .quiz .what_we_give .btn {
         height: 80px;
+    }
+
+    /* Адаптивность для .quiz .radios */
+    .quiz .radios>* {
+        width: calc(50% - 12px);
+    }
+}
+
+/* Медиа-запрос для планшетов */
+@media (max-width: 991px) {
+    .quiz .radios>* {
+        width: calc(50% - 12px);
+    }
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 767px) {
+    .quiz .radios>* {
+        width: calc(100% - 12px);
+    }
+
+    .quiz .radios label>div {
+        padding: 20px 25px 20px 50px;
+        font-size: 14px;
+    }
+
+    .quiz .radios label .check {
+        left: 25px;
+        width: 18px;
+        height: 18px;
     }
 }
 
 /* Стили для ошибок валидации квиза */
 input.error {
-  border-color: #ff4444 !important;
-  box-shadow: 0 0 5px rgba(255, 68, 68, 0.3) !important;
+    border-color: #ff4444 !important;
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.3) !important;
 }
 
 .wpcf7-form-control-wrap.error {
-  border-color: #ff4444 !important;
+    border-color: #ff4444 !important;
 }
 
 input.error::placeholder {
-  color: #ff4444 !important;
+    color: #ff4444 !important;
 }
 
 /* Стили для ошибок под полями */
 .field-error {
-  color: #ff4444;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-  padding: 0.25rem 0;
-  font-weight: 500;
+    color: #ff4444;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+    font-weight: 500;
 }
 
 .agree .field-error {
-  margin-top: 0.75rem;
-  margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Анимация для ошибок */
 input.error {
-  animation: shake 0.5s ease-in-out;
+    animation: shake 0.5s ease-in-out;
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
 }

@@ -115,88 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Fancybox
-	Fancybox.defaults.autoFocus = false
-	Fancybox.defaults.trapFocus = false
-	Fancybox.defaults.dragToClose = false
-	Fancybox.defaults.placeFocusBack = false
-	Fancybox.defaults.l10n = {
-		CLOSE: "Закрыть",
-		NEXT: "Следующий",
-		PREV: "Предыдущий",
-		MODAL: "Вы можете закрыть это модальное окно нажав клавишу ESC"
-	}
-
-	Fancybox.defaults.template = {
-		closeButton: '<svg><use xlink:href="images/sprite.svg#ic_close"></use></svg>',
-		spinner: '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="25 25 50 50" tabindex="-1"><circle cx="50" cy="50" r="20"/></svg>',
-		main: null
-	}
-
-
-	// Всплывающие окна
-	const modalBtns = document.querySelectorAll('.modal_btn')
-
-	if (modalBtns) {
-		modalBtns.forEach(el => {
-			el.addEventListener('click', e => {
-				e.preventDefault()
-
-				$("#order_modal2 input[name='type']").val(el.getAttribute('data-title'))
-
-				Fancybox.close()
-
-				Fancybox.show([{
-					src: document.getElementById(el.getAttribute('data-modal')),
-					type: 'inline'
-				}])
-			})
-		})
-	}
-
-
-	$('.modal .close_btn').click(function (e) {
-		e.preventDefault()
-
-		Fancybox.close()
-	})
-
-
-	// Увеличение картинки
-	Fancybox.bind('.fancy_img', {
-		Image: {
-			zoom: false,
-		},
-		Thumbs: {
-			autoStart: false,
-		}
-	})
-
-
-	// Моб. меню
-	const mobMenuBtn = document.querySelector('.mob_header .mob_menu_btn'),
-		mobMenu = document.querySelector('header')
-
-	if (mobMenuBtn) {
-		mobMenuBtn.addEventListener('click', e => {
-			e.preventDefault()
-
-			mobMenuBtn.classList.toggle('active')
-			BODY.classList.toggle('menu_open')
-			mobMenu.classList.toggle('show')
-		})
-	}
-
-	if ($(window).width() < 1279) {
-		$('body').on('click', 'header .menu_item > a', function (e) {
-			mobMenuBtn.classList.toggle('active')
-			BODY.classList.toggle('menu_open')
-			mobMenu.classList.toggle('show')
-		});
-	}
-
-
-
 
 	// Табы
 	var locationHash = window.location.hash
@@ -277,6 +195,82 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
+	// Функция для сбора данных из квиза и записи в форму Tilda
+	function collectQuizDataToTilda() {
+		// Собираем данные из реальных полей квиза в переменные
+
+		// Собираем предпочтения по стилю (шаг 1)
+		const stylePreferences = [];
+		$('input[name="check-1[]"]:checked').each(function() {
+			stylePreferences.push($(this).val());
+		});
+		const stylePreferencesStr = stylePreferences.join(', ');
+
+		// Собираем диапазон роста (шаг 2)
+		const heightRange = $('#height_range').val();
+
+		// Собираем предпочтения по верху (шаг 3) - это select menu-top
+		const topPreferences = [];
+		$('select[name="menu-top"] option:selected').each(function() {
+			if ($(this).val()) {
+				topPreferences.push($(this).val());
+			}
+		});
+		const topPreferencesStr = topPreferences.join(', ');
+
+		// Собираем предпочтения по низу (шаг 3) - это select menu-bottom
+		const bottomPreferences = [];
+		$('select[name="menu-bottom"] option:selected').each(function() {
+			if ($(this).val()) {
+				bottomPreferences.push($(this).val());
+			}
+		});
+		const bottomPreferencesStr = bottomPreferences.join(', ');
+
+		// Собираем дополнительные товары и услуги (шаг 4) - это checkbox-5[]
+		const additionalServices = [];
+		$('input[name="checkbox-5[]"]:checked').each(function() {
+			additionalServices.push($(this).val());
+		});
+		const additionalServicesStr = additionalServices.join(', ');
+
+		// Собираем способ связи (шаг 5)
+		const contactMethod = $('input[name="radio-5"]:checked').val() || '';
+
+		// Собираем телефон (шаг 5)
+		const phone = $('input[name="tel-1"]').val() || '';
+
+		// Собираем имя (шаг 5)
+		const name = $('input[name="text-946"]').val() || '';
+
+		// Собираем согласие (шаг 5)
+		const agreement = $('input[name="agree[]"]:checked').length > 0 ? 'Согласен' : 'Не согласен';
+
+		// Выводим все собранные данные в консоль для отладки
+		console.log('=== СОБРАННЫЕ ДАННЫЕ КВИЗА ===');
+		console.log('Предпочтения по стилю:', stylePreferencesStr);
+		console.log('Диапазон роста:', heightRange);
+		console.log('Предпочтения по верху:', topPreferencesStr);
+		console.log('Предпочтения по низу:', bottomPreferencesStr);
+		console.log('Дополнительные услуги:', additionalServicesStr);
+		console.log('Способ связи:', contactMethod);
+		console.log('Телефон:', phone);
+		console.log('Имя:', name);
+		console.log('Согласие:', agreement);
+		console.log('===============================');
+
+		// Теперь заполняем поля Tilda
+		$('input[name="t-style-preferences"]').val(stylePreferencesStr);
+		$('input[name="t-height-range"]').val(heightRange);
+		$('input[name="t-top-preferences"]').val(topPreferencesStr);
+		$('input[name="t-bottom-preferences"]').val(bottomPreferencesStr);
+		$('input[name="t-additional-services"]').val(additionalServicesStr);
+		$('input[name="t-contact-method"]').val(contactMethod);
+		$('input[name="t-phone"]').val(phone);
+		$('input[name="t-name"]').val(name);
+		$('input[name="t-agreement"]').val(agreement);
+	}
+
 	// Отправка квиза
 	$('.submit_btn').click(function (e) {
 		e.preventDefault()
@@ -327,13 +321,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			return false;
 		}
 
-		// Если все поля заполнены корректно, закрываем модал и показываем успех
-		Fancybox.close()
+		// Если все поля заполнены корректно, собираем данные и отправляем форму Tilda
+		collectQuizDataToTilda();
 
-		Fancybox.show([{
-			src: '#success_modal',
-			type: 'inline'
-		}])
+		// Отправляем форму Tilda
+		$('#tilda-quiz-form').submit();
+
+		// Автоматически кликаем на кнопку консультации успеха
+		$('.consult_success_btn').click();
 	})
 
 	// Убираем ошибки при вводе в поля
@@ -464,8 +459,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('.quiz .head .count .current').text(currentStep)
 		$('.quiz .head .progress div').width(currentStep / totalSteps * 100 + '%')
 
-		$('.quiz .manager .text').hide()
-		$('.quiz .manager .text' + currentStep).fadeIn(300)
+		$('.quiz .manager .text').html($('.quiz .step' + currentStep).data("text"))
 
 		currentStep > 1
 			? $('.quiz .prev_btn').removeClass('disabled')
@@ -552,11 +546,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	document.addEventListener('wpcf7mailsent', function (event) {
-		Fancybox.close()
-		Fancybox.show([{
-			src: '#success_modal',
-			type: 'inline'
-		}])
+		// Успешная отправка формы - обрабатывается через Tilda
+		console.log('Форма успешно отправлена');
 	}, false);
 })
 
