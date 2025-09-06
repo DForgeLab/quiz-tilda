@@ -2282,6 +2282,14 @@ header .contacts .phone a:hover
     margin-right: 10px;
 }
 
+/* Стили для иконок вопросов */
+.quiz .what_we_give .btn .icon[href="#ic_question"],
+.quiz .what_we_give .btn .icon[href="#ic_question2"]
+{
+    width: 87px;
+    height: 99px;
+}
+
 
 .quiz .what_we_give .btn img
 {
