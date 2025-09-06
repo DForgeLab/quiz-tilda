@@ -82,6 +82,12 @@ function addBaseUrl(html) {
                 return match; // Абсолютные ссылки не трогаем
             }
             return `src="${baseUrl}/${url}"`;
+        })
+        .replace(/xlink:href="([^"]*\.svg[^"]*)"/g, (match, url) => {
+            if (url.startsWith('/') || url.startsWith('http')) {
+                return match; // Абсолютные ссылки не трогаем
+            }
+            return `xlink:href="${baseUrl}/${url}"`;
         });
 
     return updatedHtml;
