@@ -2202,7 +2202,7 @@ header .contacts .phone a:hover
 
 .quiz .contacts .messengers a
 {
-    color: rgb(0 0 0);
+    color: rgb(0 0 0) !important;
     display: flex;
     width: 44px;
     height: 44px;
@@ -2234,6 +2234,7 @@ header .contacts .phone a:hover
 .quiz .contacts .messengers a:hover
 {
     background: #242424;
+    color: #fff !important;
 }
 
 

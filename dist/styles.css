@@ -2206,7 +2206,7 @@ header .contacts .phone a:hover
 
 .quiz .contacts .messengers a
 {
-    color: rgb(0 0 0);
+    color: rgb(0 0 0) !important;
     display: flex;
     width: 44px;
     height: 44px;
@@ -2238,6 +2238,7 @@ header .contacts .phone a:hover
 .quiz .contacts .messengers a:hover
 {
     background: #242424;
+    color: #fff !important;
 }
 
 
@@ -2281,15 +2282,6 @@ header .contacts .phone a:hover
     height: 11px;
     margin-right: 10px;
 }
-
-/* Стили для иконок вопросов */
-.quiz .what_we_give .btn .icon[href="#ic_question"],
-.quiz .what_we_give .btn .icon[href="#ic_question2"]
-{
-    width: 87px;
-    height: 99px;
-}
-
 
 .quiz .what_we_give .btn img
 {
